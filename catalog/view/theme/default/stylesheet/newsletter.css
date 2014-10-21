@@ -1,0 +1,164 @@
+#newsletter {
+	height:38px;
+	background:#F1F1F1;
+	margin:auto;
+	margin-top:15px;
+	width:1060px;
+	position:relative;
+	font-family: Tahoma, Arial, sans-serif;
+}
+.nlt_left {
+	float: left;
+	width: 219px;
+	height: 38px;
+	background-color: #ED1C24;
+}
+.nlt_left span {
+	display: block;
+	z-index: 60;
+	line-height:38px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left:15px;
+	text-shadow: rgba(98, 98, 98, 0.701961) 0px -1px 0px;
+}
+.nlt_arrow {
+	float:left;
+	height:38px;
+	width: 95px;
+	position:relative;
+	overflow:hidden;
+}
+.nlt_arrow .nlta {
+	border-bottom: 38px solid transparent;
+	border-left: 38px solid #ED1C24;
+	border-top: 38px solid transparent;
+	height: 4px;
+	width: 0px;
+	position: absolute;
+	margin-top: -21px;
+}
+.nlt_arrow .nlta.ar1 {
+	border-left-color: #ED1C24;
+	z-index: 52;
+}
+.nlt_arrow .nlta.ar2 {
+	z-index: 51;
+	border-left-color: #FFDFDF;
+	margin-left: 20px;
+}
+.nlt_arrow .nlta.ar3 {
+	z-index: 50;
+	border-left-color: #FFF;
+	margin-left: 40px;
+}
+.nlt_right {
+	float:right;
+	height:38px;
+	width: 680px;
+}
+.nltr1 {
+	float:left;
+	height:38px;
+}
+.nltr1_div {
+	padding-top:3px;
+}
+.nltr1 span {
+	color: #000;
+	font-style: italic;
+	font-size:14px;
+	font-weight:bold;
+}
+.nltr2 {
+	float:left;
+	height:38px;
+	padding-left:25px;
+	color:#000;
+	position:relative;
+}
+.nltr2 input {
+	margin:2px 0 3px;
+}
+.nltr2 label {
+	cursor:pointer;
+	padding-left: 5px;
+	position: relative;
+	left: -5px;
+}
+.nltr3 {
+	float:right;
+	height:38px;
+	width:420px;
+	line-height:38px;
+	padding-right:5px;
+}
+.nltr3_email {
+	float:left;
+	width:307px;
+	position:relative;
+}
+.nltr3_email input {
+	width:299px;
+	height:20px;
+	padding:3px;
+	border:1px solid #DFDFDF;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+.nltr3_email input:hover,.nltr3_email input:focus {
+	background:#FBFBFB;
+	-moz-box-shadow: inset 0px 1px 5px #CCC;
+	-webkit-box-shadow: inset 0px 1px 5px #CCC;
+	box-shadow: inset 0px 1px 5px #CCC;
+}
+.nltr3_button {
+	float:right;
+}
+.nltr3_button a span {
+	padding:0 30px;
+}
+.warninghome {
+	position: absolute;
+	top: 47px;
+	left: 0;
+	color: #F00;
+	display: block;
+	height: 26px;
+	border:1px solid #ED1C24;
+	background: #FFDFDF;
+	z-index:2;
+	opacity:0.8;
+}
+.war_arrow {
+	width:21px;
+	height:11px;
+	position:absolute;
+	top:-11px;
+	left:20px;
+	background:url(../image/war_arrow.png) no-repeat;
+}
+.warninghome.whgender {
+	width:162px;
+	right:0;
+	left:auto;
+}
+.warninghome.whgender .war_arrow {
+	left:auto;
+	right:31px;
+}
+.warninghome span {
+	display:block;
+	line-height:26px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.nltr2 input {
+	position:relative;
+	top:2px;
+}

@@ -1,0 +1,318 @@
+.popup {
+	text-align:left;
+}
+.popup .popuptitle{
+	padding:6px;
+	background:#E6E5E5;
+	font-size:15px;
+	text-transform: uppercase;
+	font-weight:bold;
+	width:310px;
+	position:relative;
+}
+.popup input{
+	width: 176px;
+	padding: 1px 5px;
+}
+.popup .popupmiddle{
+background: #F7F7F7; border: 1px solid #DDDDDD; padding: 10px; width:300px;
+}
+.popup .popupmiddle .text_notice{
+	background: url('../image/icon_confirm.gif') no-repeat left top;
+	padding:10px 10px 10px 40px;
+	text-align:left;
+}
+.warning_content {
+	height:34px;
+}
+.logout-content {
+	height:173px;
+	width:322px;
+}
+.logout-content .popupmiddle {height: 151px;}
+.logout-content .popupmiddle .text_notice.confirm_logout{margin-top:20px; margin-bottom:20px;}
+.waiting {
+	background-color: black;
+	opacity: 0.7;
+	position: absolute;
+	display: block;
+	width:100%;
+	height:1000px;
+	z-index: 333333;
+	top: 0;
+	left: 0;
+}
+.waiting  p {
+	font-size:16px;
+	width:100px;
+	color:#000;
+	height:48px;
+	text-align:left;
+	padding-left:48px;
+	line-height:48px;
+	position: fixed;
+	top: 49%;
+	left: 45%;
+	border:1px solid #FED3E4;
+	background:#FFFFFF url(../image/loading1.gif) no-repeat 10px center;
+	opacity:1.0;
+	margin:0px;
+}
+#cartpopup {
+	width:689px;
+	min-height:286px;
+	text-align:left;
+}
+#cartpopup.pro_count_2 {
+	min-height:375px;
+}
+#cartpopup.pro_count_3 {
+	min-height:464px;
+}
+#cartpopup.pro_count_3.cartsuccess {
+	min-height:514px;
+}
+#cartpopup .warning.wpcart, #cartpopup .success.spcart {
+	padding:5px 25px 5px 10px;
+	margin:0;
+}
+#cartpopup .success.spcart {
+	background:#CBF8CE;
+	border:1px solid #15A220;
+}
+.div_cart_tb {
+	position:absolute;
+	left:130px;
+	top:3px;
+}
+.success_arrow {
+	position:absolute;
+	left:-11px;
+	bottom:4px;
+	width:12px;
+	height:11px;
+	background: url(../image/success_arrow.png) no-repeat;
+}
+.warring_arrow {
+	position:absolute;
+	left:-11px;
+	bottom:4px;
+	width:12px;
+	height:11px;
+	background: url(../image/warring_arrow.png) no-repeat;
+}
+.tbc_close {
+	position:absolute;
+	right:8px;
+	bottom:8px;
+	background: url('../image/close.png') no-repeat left center transparent;
+	cursor:pointer;
+	width:7px;
+	height:7px;
+}
+.cart_remove {
+	background: url('../image/close.png') no-repeat left center transparent;
+	cursor:pointer;
+	padding:5px;
+	width:7px;
+	height:7px;
+}
+.cart_remove_loading {
+	margin-top: 3px;
+	background: url('../image/ajax_load.gif') no-repeat transparent;
+	padding-right:10px;
+}
+.cart {
+	border-collapse: collapse;
+	width: 100%;
+}
+.cart th {
+	padding: 5px;
+	font-weight: bold;
+	background: #CACACA;
+}
+.cart td {
+	padding: 5px;
+	border-bottom:1px solid #CACACA;
+}
+.cartbutton {
+	height:28px;
+	width:100%;
+}
+.cartbutton table {width:100%;border-collapse: collapse;}
+.cart_empty {
+	min-height: 80px;
+	line-height: 80px;
+	width: 689px;
+	background: #FAFAFA;
+	border: 1px solid #DFDFDF;
+	padding: 10px;
+}
+.cartpopuptitle {
+	padding: 6px 6px 6px 45px;
+	background: #E6E5E5 url("../image/container.png") no-repeat 2px -263px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align:left;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	position:relative;
+}
+.cartpopuptitle.iconorder {
+	background: #E6E5E5 url("../image/order.png") no-repeat;
+	padding-left:35px;
+}
+.cp_count {
+	min-width:15px;
+	height:15px;
+	line-height:15px;
+	padding:2px;
+	display:block;
+	background:#DB0000;
+	position:absolute;
+	left:15px;
+	top:0px;
+	color:#FFF;
+	text-align: center;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	border-radius: 15px;
+}
+#quantity {
+	width:687px;
+	margin-top:10px;
+	border-left:1px solid #CACACA;
+	border-right:1px solid #CACACA;
+	border-bottom:3px solid #CACACA;
+	margin-bottom:10px;
+}
+.column_remove {
+	width:17px;
+}
+.column_quantity {
+	width:60px;
+}
+.column_total, .column_price {
+	width:90px;
+}
+.column_image {
+	width:85px;
+}
+.column_model {
+	width:68px;
+}
+.totalstart td{
+	border-bottom:1px solid #CACACA;
+	color:#333;
+	font-size:14px;
+	padding-bottom:5px;
+}
+table td.total_left {
+	padding-right:25px;
+}
+.totalend td{
+	color:#222;
+	font-size:16px;
+	font-weight:bold;
+}
+.cartvat {
+	font-size: 13px;
+	color: rgb(85, 85, 85);
+	font-weight: normal;
+	line-height: 18px;
+	margin-bottom:10px;
+}
+.cartcontent.cpproducts {
+	height:267px;
+	overflow-y:scroll;
+}
+#cart_order {
+	cursor: pointer;
+	margin-left:10px;
+	font-weight:bold;
+	color:#000;
+	background: url("../image/arrow_hover.png") no-repeat left center;
+	padding-left:12px;
+}
+#cart_order:hover { color:#DB0000;}
+#cartpopup .popupmiddle.ctp_content {
+	width:689px;
+	margin-top:10px;
+}
+#cartpopup .ctp_options {
+	width:339px;
+	float:left;
+}
+#cartpopup .ctp_login {
+	width:339px;
+	margin-left:349px;
+}
+#cartpopup .ctp_login  input {
+	width:186px;
+}
+#cartpopup .ctp_title {
+	border-bottom:1px solid #DFDFDF;
+	font-size:16px;
+	font-weight:bold;
+	padding-bottom:5px;
+	margin-bottom:10px;
+}
+#cartpopup .ctp_button {
+	width:337px;
+	height:40px;
+	font-size:18px;
+	font-weight:bold;
+	background:#E6E5E5;
+	text-align:center;
+	border:1px solid #DFDFDF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius:5px;
+	border-radius: 5px;
+	margin-top:30px;
+	display:block;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+#cartpopup .ctp_button span {
+	display:block;
+	line-height:38px;
+	border:1px solid #FAFAFA;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius:5px;
+	border-radius: 5px;
+	cursor:pointer;
+}
+#cartpopup .ctp_button:hover {
+	background:#FAFAFA;
+}
+.bod_title {
+	margin-bottom: 2px; display: block;font-size:14px;
+}
+.buttonnganluong {
+	width:142px;
+	height:40px;
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+	float:right;
+	background: url("../image/btn-paynow-122.png") no-repeat;
+}
+.logo-nl {
+	float:left;
+}
+.cpayment {
+	width:100%;
+	height:55px;
+	text-align:right;
+}
+.icon-nl {
+	padding-left:20px;
+	background: url("https://www.nganluong.vn/webskins/skins/nganluong/images/image/nl_logo_icon.png") no-repeat left -20px;
+}
+.ctp_content label:hover .icon-nl {
+	background: url("https://www.nganluong.vn/webskins/skins/nganluong/images/image/nl_logo_icon.png") no-repeat left -1px;
+}

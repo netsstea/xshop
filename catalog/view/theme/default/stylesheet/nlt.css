@@ -1,0 +1,64 @@
+#newsletter {
+	width: 300px;
+	height: 35px;
+	position: fixed;
+	left: 11px;
+	bottom: 0;
+	z-index: 999;
+}
+#newsletter .nltbox {
+	width: 300px;
+	height: 35px;
+	background: url(../image/voucher.png) 0 0 no-repeat;
+	cursor: pointer;
+	position: fixed;
+	left: 11px;
+	bottom: 0;
+	z-index: 999;
+}
+#newsletter .nltpopup {
+	width: 298px;
+	height: 238px;
+	border:1px solid #00B3F9;
+	position: fixed;
+	left: 11px;
+	bottom: -240px;
+	z-index: 998;
+	background: url(../image/bg_vc.png) 0 0 no-repeat;
+	-webkit-border-radius: 15px 15px 0 0;
+	-moz-border-radius: 15px 15px 0 0;
+	-khtml-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
+}
+.ntlemail {
+	margin-top: 80px;
+	width:100%;
+	text-align:center;
+	position:relative;
+}
+.ntlemail input {
+	width:240px;
+	border:1px solid #00B3F9;
+}
+.nltbutton {
+	margin-top:20px;
+}
+.warninghome {
+	position: absolute;
+	top: 30px;
+	left: 25px;
+	color: #F00;
+	display: block;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+.nltclose {
+	cursor:pointer;
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:0;
+	top:0;
+}

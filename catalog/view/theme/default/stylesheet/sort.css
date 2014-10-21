@@ -1,0 +1,95 @@
+.sort {
+	margin-bottom: 10px;
+	background: #FAFAFA;
+	height: 30px;
+	border:1px solid #DFDFDF;
+}
+.listpro .sort {
+	border:1px solid #DFDFDF;
+	margin-top:10px;
+}
+.sort .div1  {
+	float: right;
+	margin-left: 5px;
+	padding-top: 6px;
+	padding-right: 9px;
+}
+.sort .div2 {
+	text-align: right;
+	padding-top: 9px;
+}
+.sort select {
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+}
+.pagination {
+	display: inline-block;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+	width:100%;
+	background: #FAFAFA;
+	border:1px solid #DFDFDF;
+	margin-top:10px;
+}
+.pagination .links, .pagination .results {
+	padding: 7px;
+}
+.pagination .links {
+	float:left;
+	text-align:center;
+}
+.pagination .links a {
+	height:30px;
+	display:inline-block;
+	border:1px solid #000;
+	text-decoration: none;
+	min-width:20px;
+}
+.pagination .links span {
+	line-height:28px;
+	font-size:14px;
+	color:#FFF;
+	display:inline-block;
+	text-align:center;
+	padding:0 4px;
+	border:1px solid #888;
+	min-width:20px;
+	background:#000;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #000, #333);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#000));
+}
+.pagination .links a:hover {
+	border:1px solid #DFDFDF;
+}
+.pagination .links a:hover span {
+	border:1px solid #FFF;
+	background: #DFDFDF;
+	color:#000;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #DFDFDF, #fff);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#DFDFDF));
+}
+.pagination .links b {
+	font-weight:normal;
+	height:30px;
+	display:inline-block;
+	border:1px solid #DFDFDF;
+	text-decoration: none;
+	min-width:20px;
+}
+.pagination .links b span {
+	border:1px solid #FFF;
+	background: #E8F3F7;
+	color:#000;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #DFDFDF, #fff);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#DFDFDF));
+}
+.pagination .results {
+	float:right;
+	text-align:center;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+}

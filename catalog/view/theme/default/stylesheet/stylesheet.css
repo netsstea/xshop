@@ -1,0 +1,217 @@
+html {
+	overflow: -moz-scrollbars-vertical;
+	margin: 0;
+	padding: 0;
+}
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+body, input, textarea, select{
+	font-size: 12px;
+}
+td, th {
+	font-size:auto;
+}
+form {
+	padding: 0;
+	margin: 0;
+	display: inline;
+}
+input, textarea, select {
+	margin: 3px 0px;
+	outline: none;
+	border:1px solid #CCC;
+}
+input, select {
+	line-height:22px;
+}
+select {
+	height:30px;
+}
+input[type="text"],input[type="password"], textarea {
+	padding: 5px 9px;
+	line-height:18px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+input[type="text"]:focus,input[type="password"]:focus, textarea:focus {
+	background:#FDFDFD;
+	-moz-box-shadow: inset 0px 1px 5px #CCC;
+	-webkit-box-shadow: inset 0px 1px 5px #CCC;
+	box-shadow: inset 0px 1px 5px #CCC;
+}
+a, a:visited {
+	color: #0B6FB9;
+	text-decoration: none;
+	cursor: pointer;
+	font-size:auto;
+	outline: 0;
+}
+a:hover {
+	color: #F80000;
+}
+a img {
+	border: none;
+}
+p {
+	margin-top: 0px;
+}
+@font-face {
+    font-family: 'UTMCafetaRegular';
+    src: url('../font/utm_cafeta-webfont.eot');
+    src: url('../font/utm_cafeta-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/utm_cafeta-webfont.woff') format('woff'),
+         url('../font/utm_cafeta-webfont.ttf') format('truetype'),
+         url('../font/utm_cafeta-webfont.svg#UTMCafetaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body ::-webkit-scrollbar
+{
+  width: 5px;  /* for vertical scrollbars */
+  height: 5px; /* for horizontal scrollbars */
+}
+
+body ::-webkit-scrollbar-track
+{
+  background: rgba(202, 202, 202, 1);
+}
+
+body ::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}
+/* layout */
+.success {
+	padding: 5px 0px;
+	margin-bottom: 10px;
+	background: #E4F1C9;
+	border: 1px solid #A5BD71;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+}
+.warning {
+	padding: 5px 0px;
+	margin-bottom: 10px;
+	background: #FFDFE0;
+	border: 1px solid #FF9999;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+}
+.warning2 {
+	color:#F00;
+}
+.wait {
+	padding: 5px 0px;
+	margin-bottom: 10px;
+	background: #FBFAEA;
+	border: 1px solid #EFEBAA;
+	font-size: 11px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+}
+.required {
+	padding:0 5px;
+}
+.required  font{
+	color:#F00;
+	font-weight:bold;
+}
+.error {
+	color: #FF0000;
+	display: block;
+}
+.help {
+	cursor: pointer;
+}
+.clear { /* generic container (i.e. div) for floating buttons */
+	overflow: hidden;
+	width: 100%;
+}
+.button,a.button {
+	height:25px;
+	margin:0px;
+	display: inline-block;
+	background:#CC0000;
+	padding-bottom:1px;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #CC0000, #F80000);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F80000), to(#CC0000));
+	border: 1px solid #CC0000;
+	text-decoration: none;
+	color:#FFF;
+	font-weight:bold;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	transition: all .6s ease;
+}
+.button span,a.button span {
+	padding:0 18px;
+	line-height:25px;
+	display:block;
+}
+.button:hover,a.button:hover {
+	background:#F80000;
+	border: 1px solid #CC0000;
+}
+
+.buttons {
+	background: #F8F8F8;
+	border: 1px solid #D3D3D3;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.buttons input {
+	padding: 0px;
+	margin: 0px;
+}
+.buttons table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.buttons table td {
+	vertical-align: middle;
+}
+.content {
+	background: #F8F8F8;
+	border: 1px solid #D3D3D3;
+	padding: 10px;
+	margin-top: 3px;
+	margin-bottom: 10px;
+}
+#news ul {
+	margin: 0 0 0 10px;
+	padding: 0 0 0 10px;
+	list-style: url('../image/bullet.gif');
+}
+#news ul li{padding:2px 0px;}
+#news ul li a{color:#000;}
+#news ul li a:hover{color:#F80000;}
+.Manuxt {
+	position: absolute;
+	top:9px;
+	right:10px;
+	padding-right:9px;
+	font-size:12px;
+	background: url(../image/sb_xt.png) no-repeat right center;
+	color:#555 !important;
+	font-weight:bold;
+}
+.Manuxt:hover {
+	text-decoration:underline;
+}
+.h1manu {
+	font-size:28px;
+	font-family:'Roboto Condensed', sans-serif;
+	margin:15px 0;
+}

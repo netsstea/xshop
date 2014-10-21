@@ -1,0 +1,138 @@
+#container {
+	width: 100%;
+	text-align: left;
+	background:#FFF;
+}
+#wrapper {
+	width:1060px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+#wrapper:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+#column_left {
+	float: left;
+	width: 220px;
+	margin-right: 11px;
+	clear: right;
+}
+#column_right {
+	float: right;
+	width: 220px;
+	margin-left: 11px;
+	clear: left;
+}
+#content {
+	margin-right: 0;
+	margin-left:231px;
+	margin-bottom: 10px;
+}
+#content.col_left {
+	margin-left:231px;
+	margin-right:0;
+}
+#content.col_right {
+	margin-right:231px;
+	margin-left:0;
+}
+#content .top {
+	display: block;
+	height:32px;
+	position: relative;
+	background:#F3F3F3;
+	background-image: -moz-linear-gradient(100% 100% 90deg, #DFDFDF, #F3F3F3);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F3F3F3), to(#DFDFDF));
+	border-bottom:3px solid #000;
+}
+#content.col_right .top {
+	overflow:hidden;
+}
+#content .top .center {
+	display: block;
+	height:32px;
+	border-top: 1px solid #DFDFDF;
+	border-right:1px solid #DFDFDF;
+	width:100%;
+	float:left;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#content .top h1 {
+	background:#000;
+	display: inline-block;
+	height:32px;
+	line-height:32px;
+	padding:0 10px 0 10px;
+	position:relative;
+	top:-1px;
+	float:left;
+}
+#content h1 {
+	color: #FFF;
+	font-size: 18px;
+	font-family:UTMCafetaRegular, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 0px;
+	text-transform: uppercase;
+}
+#content h1 a {
+	color:#FFF;
+	font-family:UTMCafetaRegular, Arial, Helvetica, sans-serif;
+}
+#content h2.product {
+	color: #000;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 0px;
+}
+.heading {
+	border-bottom: 1px solid #DFDFDF;
+	padding-bottom: 3px;
+	margin-bottom: 10px;
+	color: #222;
+	font-size: 18px;
+	font-family:UTMCafetaRegular, Arial, Helvetica, sans-serif;
+}
+.heading.search {
+	margin-top:12px;
+	border:none;
+}
+#content .middle {
+	background: #FFFFFF;
+	min-height: 200px;
+	border:1px solid #DFDFDF;
+	border-top:none;
+	padding:10px;
+}
+#content .middle.listpro {
+	border:none;
+	padding:0;
+	overflow:hidden;
+}
+.dangky input, #content.ct_login input {
+	width:239px;
+}
+.dangky select {
+	width:259px;
+}
+#content.ct_login {
+	margin-left:220px;
+	margin-right:220px;
+}
+#content.ct_login .content {
+	margin-bottom:0;
+}
+#content.ct_login .middle{
+	min-height:139px;
+}
