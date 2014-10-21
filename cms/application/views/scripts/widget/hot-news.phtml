@@ -1,0 +1,18 @@
+<?php
+$cond = array (
+            'where' => array('category' => 'hot'),
+            'order' => array('ots' => -1),
+            'limit' => 10
+        );
+$r = Dao_Node_Story::getInstance()->find($cond);
+if ($r['success'])
+{
+    ?>
+    <ul class='no-padding-ul'>
+      <?php foreach ($r['result'] as $row):?>
+          <li><a href='<?php echo node_link('story', $row);?>'><?php echo $row['name'];?></a></li>
+      <?php endforeach;?>
+   </ul>  
+<?php     
+}
+?>

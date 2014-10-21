@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"> 
+        
+        <title>Mobile News</title>
+        <link href="css/reset.css" >
+        <link href="css/jquery.mobile-1.3.2.min.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            var SERVER = "<?php echo getenv('SERVER_URL');?>"; //before anything else
+            var formConfigs = []; //for all the form ajax actions
+            var listUrl = "/story/list";
+            localStorage.setItem('cate', '');    
+			var page_nr = 1;
+			var current_page = 'list';
+			<?
+			/*
+			var config = {
+			   panelTheme : 'e',
+			   panelFocusedTheme : 'a'
+			        
+			}
+			*/
+			?>
+        </script>
+        <script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.timeago.js"></script>
+        <script type="text/javascript" src="js/cl.js"></script>
+        <script type='text/javascript' src='js/site.js'></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<script type="text/javascript">
+		function hideAddressBar()
+		{
+			if(!window.location.hash)
+			{
+				if(document.height < window.outerHeight)
+				{
+					document.body.style.height = (window.outerHeight + 50) + 'px';
+				}
+				 
+				setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+			}
+		}
+		 
+		window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
+		window.addEventListener("orientationchange", hideAddressBar );
+		
+		</script>
+    </head>
+<body>
+    
+<div data-role="page" id="listPage" class="ui-responsive-panel">
+    <div data-role="header" data-position="fixed">
+        <h1 id='header-text'>Tin điểm</h1>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#" data-icon="refresh" data-iconpos="notext" id='refresh-btn'>Refresh</a>
+    </div>
+    
+	<div data-role="content" data-mini="true"> 
+		<div id='news_list_wrapper'>
+		    <ul id="news_list"  data-role="listview"  data-mini="true" data-split-icon="gear" data-split-theme="d">
+			    <li data-url='#load' data-theme='c' id='load_more'>
+					<button>Xem thêm (trang <span id='page_nr'>2</span>)...</button>
+				</li>
+		    </ul>
+	    <a href='#viewPage' id='gotopage2' style='display:none;'  >gotopage2</a>
+	    </div>
+	</div><!-- /content -->
+	
+    
+	<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+		<? include('nav.html');?>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="viewPage" class="ui-responsive-panel">
+    <div data-role="header">
+        <h1 id='header-text2'>News</h1>
+		<a href="javascript:void(0);" id='back-btn' data-icon="back" >Back</a>
+		<a href="#" data-icon="refresh" data-iconpos="notext" id='refresh-view-btn'>Refresh</a>
+    </div>
+
+	<div data-role="content" data-mini="true">
+		<div id='item_content'>
+			Loading...
+		</div>
+		<a href='#listPage' id='gotopage1' style='display:none;' >gotopage1</a>
+	</div><!-- /content -->
+
+	<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
+		<? include(getenv('SITE') . 'nav.html');?>
+	</div>
+
+
+</div>
+</body>
+</html>
+<style>
+div.title
+{
+	font-weight:bold;
+}
+h3.title
+{
+	margin-top:0px !important;
+}
+ul#news_list *
+{
+	white-space:normal;
+}
+div.ui-btn-text, .ui-link-inherit, . ui-li-heading .ui-li-desc { white-space:normal; }
+
+
+div.avatar img
+{
+	width:100%;'
+}
+.subtitle
+{
+	color:gray;
+	font-weight:normal;
+}
+div.chapo
+{
+	font-weight:normal;
+	white-space:normal;
+}
+div.chapo2
+{
+	font-weight:bold;
+	color:gray;
+	margin-top:10px;
+	white-space:normal;
+}
+
+div.content
+{
+	margin-top:10px;
+	white-space:normal;
+}
+</style>

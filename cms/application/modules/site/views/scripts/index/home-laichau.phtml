@@ -1,0 +1,130 @@
+<div class='row'>
+<div class='col-md-2' style='padding-left:0px;'>
+	<?php echo $this->render('laichau/left-menu.phtml');?>
+</div>
+<div class='col-md-8' style='padding-left:0px;'>
+<?php 
+	$top5 = Dao_Node_Story::getInstance()->getByList('home_top5');
+	$first = array_shift($top5);
+	$top10 = Dao_Node_Story::getInstance()->getByList('home_top10');
+	
+?>
+	<div class='row'>
+		<div class='col-md-6' id='featured-news'>
+			<a href='<?php echo node_link('story', $first);?>'>
+				<img class='img-avatar img-responsive img-rounded' src='<?php echo $first['avatar'];?>' style='width:100%;'/>
+				<br/>
+				<?php echo $first['name'];?>
+			</a>
+			<p>
+			<?php echo $first['chapo'];?>
+			</p>
+		</div>
+		
+		<div class='col-md-6'>
+		    <div class="panel panel-success">
+			      <div class="panel-heading">
+			        <h3 class="panel-title">Tin trong tinh</h3>
+			      </div>
+			      <div class="panel-body">
+			
+				<?php foreach ($top10 as $t):?>
+				 <div>
+				<i style='font-size:80%;' class='<?php echo get_icon('chevron-right');?>'></i> 
+					<a href='<?php echo node_link('story', $t);?>'><?php echo $t['name']?></a>
+					 (<?php echo date('d/m/Y', $t['ts']);?>)
+				 </div>
+				<?php endforeach;?>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class='row'>
+		<?php foreach ($top5 as $news):?>
+		<div class='col-md-3' >
+			<a href='<?php echo node_link('story', $news);?>'>
+				<img class='img-avatar img-responsive' src='<?php echo $news['avatar'];?>' style='width:100%;'/>
+				<br/>
+				<?php echo $news['name'];?>
+			</a>
+		</div>
+		<?php endforeach;?>
+	</div>
+	
+	<?php 
+		$categoryList = Dao_Node_Category::getInstance()->getByList('home_news_cate');
+		foreach ($categoryList as $cate):?>
+		<?php 
+			$where = array('category' => $cate['slug']);
+			$cond = array('where' => $where, 'limit' => 5, 'order' => array('ts' => -1));
+			//f($cond);
+			$r = Dao_Node_Story::getInstance()->findAll($cond);
+			if($r['success'])
+			{
+				$cateStories = $r['result'];
+				$first = array_shift($cateStories);
+			}
+		?>
+	<div class='row'>
+	    <div class="panel panel-default">
+	      <div class="panel-heading">
+	        <h3 class="panel-title"><?php echo $cate['name'];?></h3>
+	      </div>
+	      <div class="panel-body">
+	      	<div >
+	        	<div class='row'>
+	        		<div class='col-md-3'>
+		        		 <img alt="" src="<?php echo $first['avatar'];?>" class='img-responsive'
+		        		 >
+	        		</div>
+	        		<div class="col-md-9">
+	        			<a href="<?php echo node_link('story', $first);?>">
+	        			<?php echo $first['name'];?></a>
+	        			<br><div align="justify">
+	        			<font face="Times New Roman" size="4">
+	        				<?php echo $first['chapo']?>
+	        			</font></div>
+        			</div>
+	        	</div>
+	        	<div style='clear:both;min-height:10px;'></div>
+	        	<div>
+	        		<?php foreach ($cateStories as $s):?>
+	        		<div>
+			    	    <?php echo gen_icon('chevron-right');?> <a href="<?php echo node_link('story', $s);?>"><?php echo $s['name']?></a>
+	        		</div>
+	        		<?php endforeach;?>
+	        	</div>
+	      	</div>
+	      </div>
+	    </div>
+	</div>
+	<?php endforeach;?>
+</div>
+
+
+<div class='col-md-2' style='padding-left:0px;'>
+	<?php echo $this->render('laichau/right-menu.phtml');?>
+</div>
+</div>
+
+<style>
+.borderImages {
+    border: 2px solid #CDCDCD;
+    float: left;
+    height: 128px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 192px;
+}
+
+.contentNews {
+    float: left;
+    font-size: 12px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding-left: 5px;
+    /*width: 400px;*/
+}
+</style>

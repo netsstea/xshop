@@ -1,0 +1,177 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+$lu = Zend_Registry::get('user');
+$redis = init_redis(RDB_CACHE_DB, true);
+ 
+?>
+<div class='row'>
+
+<div class='col-md-3 '>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href='/story/search'><?php echo gen_icon('news');?> Stories</a>
+        <a class='pull-right' title='Add New story' href='/story/new'><?php echo gen_icon('plus');?></a>
+        </h3>
+      </div>
+      <div class="panel-body">
+		<div>
+	      	<span class='label label-warning'><?php echo $redis->get(redis_key("new_story_counter",$lu['iid']));?> new stories</span>
+		</div>
+		<div>
+			<a href='/story/search-comment'>
+			  	<span class='label label-warning'><?php echo $redis->get(redis_key("new_comment_counter",$lu['iid']));?> new comments</span>
+			</a>
+		</div>
+      	
+        <ul style='padding-left:5px;'>
+            <li><a style='color:red;' class='modal_ajax' 
+            	href="/story/delete-old-stories">Delete Old stories</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<div class='col-md-3 '>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	<a href='/list/search'><?php echo gen_icon('list-alt');?> GUI widgets</a>
+        	<a title='New widget' href='/list/new' class='pull-right'><?php echo gen_icon('plus');?></a>
+        	</h3>
+      </div>
+      <div class="panel-body">
+        <ul style='padding-left:5px;'>
+        	<li><a  href="/list/search?items_type=story">Story widgets</a></li>
+            <li><a  href="/list/search?items_type=category">Category widgets</a></li>
+     </ul>
+      </div>
+    </div>
+</div>
+
+<div class='col-md-2'>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href='/tag/index/search'><?php echo gen_icon('tag');?> Tags</a>
+        <a title='Add new tag' class='pull-right' href='/tag/index/new'><?php echo gen_icon('plus');?></a>
+        </h3>
+      </div>
+      <div class="panel-body">
+            <a  href="/tag/index/search?f=1">Current Hot Tag</a>
+                <ul style='padding-left:5px;'>
+                    <?php $where = array('f' => 1);
+                        $order = array('fts' => -1);
+                        $limit = 5;
+                        $cond  =array('where' => $where, 'order' => $order, 'limit' => $limit);
+                        $r = Dao_Node_Tag::getInstance()->find($cond);
+                        if ($r['success'])
+                        {
+                            $list = $r['result'];
+                        }
+                    ?>
+                    <?php foreach ($list as $row):?>
+                    <li>
+                        <?php echo display_tag($row);?>
+                     </li>
+                    <?php endforeach;?>
+                </ul>
+            
+            
+        </ul>
+      </div>
+    </div>
+</div>
+
+<div class='col-md-2 '>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	<a href='/category/index/search?type=story'><?php echo gen_icon('category');?> Category</a>
+        	<a class='pull-right' href='/category/index/new?type=story'><?php echo gen_icon('plus');?></a>
+        </h3>
+      </div>
+      <div class="panel-body">
+      		TODO: print categories here
+      </div>
+    </div>
+</div>
+
+<div class='col-md-2 '>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title" title="Websites to crawl">
+        	<a title='Website sources' href='/source/search'>
+        		<?php echo gen_icon('source');?> Sources
+        	</a>
+        	<a class='pull-right' title="new source" href='/source/new'><?php echo gen_icon('plus');?></a>
+        	</h3>
+      </div>
+      <div class="panel-body">
+			Hot Sources : vne : 5 items... 
+      </div>
+    </div>
+</div>
+
+
+</div> <?php //end row 1?>
+
+<div class='row'>
+
+
+<div class='col-md-2 '>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href='/user/search'><?php echo gen_icon('user');?> User</a></h3>
+      </div>
+      <div class="panel-body">
+      	Total : 'user counter'
+      	
+      	<hr/>
+      	User roles:
+        <ul style='padding-left:5px;'>
+    	    <li><a target="_blank" href="/user/search-roles">Roles</a></li>
+    	    <li><a target="_blank" href="/fake/index/new?file=1">Insert fake user</a></li>
+    	    <li><a target="_blank" href="/user/new">Insert user manually</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+<div class='col-md-2 '>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><?php echo gen_icon('wrench');?> SysAdmin</h3>
+      </div>
+      <div class="panel-body">
+        <ul style='padding-left:5px;'>
+            <li><a  href="/story/index/refresh-autosuggest">Refresh Tag Suggestions</a></li>
+            <li><a  href="/redis/index">Redis</a></li>
+     </ul>
+      </div>
+    </div>
+</div>
+
+<div class='col-md-2 '>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Others</h3>
+      </div>
+      <div class="panel-body">
+        <ul style='padding-left:5px;'>
+        	<li><a href='/conf/search'>Configuration</a>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+
+</div>
+
+<style>
+.panel-body
+{
+    min-height:150px;
+}
+</style>

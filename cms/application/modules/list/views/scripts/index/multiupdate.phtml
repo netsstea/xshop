@@ -1,0 +1,117 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+$theme = Zend_Registry::get('theme');
+$templateName = get_value('template');
+$span1 = 8;
+$span2 = 2;
+$span3 = 12 - $span1 - $span2;
+
+//Set step
+$form = new Story_Form_Search();
+//if (null !== $step)
+$attr = array(
+        'method' => "POST",
+        'action' => '/story/search'
+);
+$form->setStep('list_items_order');
+$form->attributes = $attr;
+$form->build($_REQUEST);
+$this->form = $form;
+if($row['items_type'] == 'story')
+    $form->category->setValue($row['prefich']);
+$form->setAttrib('class', 'cl_ajax');
+$form->setAttrib('id', 'search-form2');
+$form->setAttrib('data-sand-callbacks', 'list-items-order-search-items');
+
+?>
+<?php echo $this->render('index/top-nav.phtml');?>
+<div class='row' >
+
+<div class='col-md-<?php echo $span1;?>'>
+
+<?
+    $this->renderMode = 'admin';
+    $path = "index/$theme/{$templateName}.phtml";
+ 	 echo $this->render($path);
+?>
+</div>
+
+
+
+<div class="col-md-<?echo $span2;?>">
+	<h3 class='margin-top-0'><?php echo $row['items_type'];?> to add</h3>
+	<div class='item-exists'>
+		<?php echo gen_icon('info-sign');?> Item with this background is already added;
+	</div>
+	<hr/>
+	<div id='search-results'>
+	
+	</div>
+	
+	<div>
+		<ul class='pagination' id='search-results-pagination' data-target-form-selector='#search-form2'>
+			<li class='active'><a href='#'>1</a></li>
+			<li><a href='#'>Next</a></li>
+		</ul>
+   	
+    	<textarea id='search-result-pagination-tpl' style='display:none;'>
+    	{{#list}}
+    		<li class="{{active}}">
+    			<a data-page={{page}} href='javascript:void(0);'>{{page_display}}</a>
+    		</li>
+    	{{/list}}
+    	</textarea>		
+	</div>
+	
+</div>
+<div class="col-md-<?php echo $span3;?>">
+	<div>
+    <h3 class='margin-top-0'>Filter Story</h3>
+    </div>
+    	
+   	<div class='alert alert-warning'>
+   	TODO: Add category here if items_type == 'story'
+   	</div>
+    <div>
+    	<div class='well well-shallow'>
+    	<?php echo $form;?>
+    	</div>
+    	
+    	
+    	<textarea id='search-result-item-tpl' style='display:none;'>
+    	{{#result}}
+    		<div class='item-bank {{item-exists}}'
+    			title="{{title}}" 
+    			data-item-id='{{id}}'>
+    			<a href='{{link}}' class='preview modal_ajax label label-default'><?php echo gen_icon('preview');?></a>
+    				 
+    			<a title="click to add to list" class='add-concept-to-group' href='javascript:void(0);'><span class='item-index'>{{idx}}</span>. {{name}}</a>
+    			
+    		</div>
+    	{{/result}}
+    	</textarea>
+    </div>
+</div>
+
+</div>
+
+
+
+
+	
+<?php //echo $this->render('index/concepts-order-js.phtml');?>	
+
+<?php 
+$this->headScript()->headScript()->prependFile(SAND_ASSETS_CDN . "/js/jquery-ui/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js");
+$this->headScript()->headScript()->prependFile(SAND_ASSETS_CDN . "/js/3rdparty/jquery.simulate.drag-sortable.js");
+$this->headScript()->headScript()->prependFile(ASSETS_CDN . "/js/dragndrop.js");
+$this->headLink()->appendStylesheet(SAND_ASSETS_CDN . "/js/jquery-ui/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css");
+$this->headScript()->headScript()->prependFile(ASSETS_CDN . "/js/list/order-items.js");
+?>
+<style>
+.connectedSortable li
+{
+    border : 1px solid #eee;
+    padding : 5px;
+}
+</style>

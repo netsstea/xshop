@@ -1,0 +1,86 @@
+<h3>Configuration Help</h3>
+<div class='well'>
+You need to configure values for the following keys:
+<hr/>
+	<ul>
+		<li><b>hotness_cache_nr_pages</b> : <?php echo get_conf('hotness_cache_nr_pages', 5);?> (pages)
+        <?php if (get_conf('hotness_cache_nr_pages', 0) ==0):?>( <a href="/conf/new?name=hotness_cache_nr_pages">Configure now</a> )<?php endif;?>
+        <br/> Limit pages number to cache data</li>
+        <li><b>hotness_refresh_rate</b> : <?php echo get_conf('hotness_refresh_rate', 300);?> (seconds)
+        <?php if (get_conf('hotness_refresh_rate', 0) ==0):?>( <a href="/conf/new?name=hotness_refresh_rate">Configure now</a> )<?php endif;?>
+        <br/>Default time.
+        This value can be specified & varied per region</li>
+        <li><b>hotness_refresh_activites_count</b> : <?php echo get_conf('hotness_refresh_activites_count',15);?> (activities number)
+        <?php if (get_conf('hotness_refresh_activites_count', 0) ==0):?>( <a href="/conf/new?name=hotness_refresh_activites_count">Configure now</a> )<?php endif;?>
+        <br/>Default price that customer must pay, in addition to the trip's cost, to start using the service.
+        This value can be specified & varied per region</li>
+        <li><b>get config SITE for create Fake users</b> : <?php echo get_conf('fake_user','hoibinet');?> (name of folder /data/hoibinet or etx)
+        <?php if (get_conf('fake_user','hoibinet') ==0):?>( <a href="/conf/new?name=fake_user">Configure now</a> )<?php endif;?>
+        <br/>Default is "hoibinet" . get all datafile in DIR "/data/hoibinet" parse and loop then insert to DB</li>
+        <li><b>get config EMAIL of Crawler for create Fake users post Story</b> : Now config is :<?php echo get_conf('crawler','crawler@stuff.com');?> (Email of crawler | UNIQUE)
+        <?php if (get_conf('crawler','crawler@stuff.com') ==0):?>( <a href="/conf/new?name=crawler">Configure now</a> )<?php endif;?>
+        <br/>Default is "crawler@stuff.com" . if user is Cralwer ,when post new stores it will random user post</li>
+        <li><b>get config "Number of Users you want random" </b> : Now config is :<?php echo get_conf('nrOfRandomUser','100')?> (number of user random range ( query to DB and get number users) )
+        ( <a href="/conf/new?name=nrOfRandomUser">Configure now</a> )
+        <br/>Default is "100" . if user is Cralwer ,when post new stores it will random user post</li>
+        <li><b>get config "rage maker language dropdown list" </b> : Now config is :<?php echo get_conf('ragemaker_language','')?>
+        ( <a href="/conf/new?name=ragemaker_language&type=string">Configure now</a> )
+        <br/>Default is ""</li>
+    </ul>
+<hr/>
+<h3>iPhone conversation config</h3>
+	<ul>
+		<li>
+			<b>Config font_family for iphone conversation</b><br>
+			   default font now is <b>arial.ttf</b> and <b>arialb.ttf</b><br>
+			   <?php if (get_conf('iphone_font','arial.ttf') !=0 && get_conf('iphone_fontb','arialb.ttf') !=0):?>
+				now config is <br>
+					normal font :<?php echo get_conf('iphone_font','arial.ttf');?><br>
+					bold font :<?php echo get_conf('iphone_fontb', 'arial.ttf');?><br>
+				<?php else:?>
+				config now : <br>	
+					<i>normal font</i> : <a href="/conf/new?name=iphone_font">Configure now</a><br>
+					<i>bold font</i> : <a href="/conf/new?name=iphone_fontb">Configure now</a><br>
+				<?php endif;?>	 
+				//PRO TIP<br>
+					now we are supported THAILAND font : <b>Loma.ttf</b> and <b>LomaBold.ttf</b><br>
+					now we are supported GLOBAL font : <b>arial.ttf</b> and <b>arialb.ttf</b> <br> 
+					<span style="color:red;">you need config all normal and bold font it will make iphone conversation fully working</span>
+                <br/>
+                					
+		</li>
+		<li>
+			<br>
+			<b>config for iPhone conversation background image</b><br>
+			default is <b>"BG.png"</b><br>
+			<a href="/conf/new?name=background_iphone_folder">Configure now</a><br>
+			<b>background_iphone_folder</b> 'vn' or 'th' for iphone background
+		</li>
+		<li>'iphone_help' (text), 'sample_iphone_chat'
+	</ul>
+	
+<h3>Ads</h3>
+    sidebar_ad1,	
+</div>
+<div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">rage-maker help text</div>
+      <div class="panel-body">
+       <h4>One help text line is one -li- element.Type "array" for example</h4>
+    	<ul>
+            <li>Sử dụng các tùy chọn Đường dọc, Đường ngang của mỗi dòng để xóa đường viền nếu cần thiết</li>
+            <li>Chọn màu trắng cho bút vẽ để làm chức năng như cục tẩy</li>
+            <li>Bạn có thể kéo thả, co giãn, xoay, lật, tạo bản copy đối tượng</li>
+            <li>Bạn có thể chèn ảnh trên web khác vào bằng chức năng 'Chèn ảnh từ URL'</li>
+            <li>Bạn có thể kéo thả ảnh từ máy tính vào khung vẽ</li>
+            <li>Chức năng Undo sẽ hữu ích trong vài trường hợp</li>
+            <li>Không đăng ảnh lên nếu bạn chỉ vẽ linh tinh để thử nghiệm, tránh spam</li>
+            <li>Ảnh đăng lên vẫn phải tuân thủ đầy đủ nội quy trong mục Đăng ảnh</li>
+            <li>Công cụ này không nhằm thay thế photoshop, paint... Nếu bạn có kinh nghiệm, khuyến cáo nên sử dụng các phần mềm trên máy tính để có những bức ảnh với chất lượng cao nhất</li>
+            <li>Mọi đóng góp, báo lỗi vui lòng gửi mail về hoibinet@gmail.com hoặc bình luận trang này</li>
+        </ul>
+      </div>
+      <div ><a href="/conf/new?name=help_text&type=array">config now</a></div>
+    </div>
+</div>
+

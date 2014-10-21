@@ -1,0 +1,20 @@
+<?php $page = Zend_Registry::get('page');?>
+<div class='border-style' style='margin-top: 10px;'>
+<ul class='nav nav-pills nav-stacked'>
+	<li <?php if ($page == 'source/index/new') echo "class='active';"?>><a href="/source/new?type=1"><?php echo gen_icon('plus');?>
+	<?php if (!isset($this->compactMode)):?> New<?php endif;?></a></li>
+	<? if (isset($this->row)) :?>    
+	<li <?php if ($page == 'source/index/update' && $this->step == '') echo "class='active';"?>>
+		<a href="/source/update<?php if (isset($this->row['id'])) echo "?id=" . $this->row['id'];?>"><?php echo gen_icon('edit');?>
+		<?php if (!isset($this->compactMode)):?> Update<?php endif;?></a></li>
+	<li <?php if ($page == 'source/index/update' && $this->step == 'avatar') echo "class='active';"?>>
+		<a href="/source/update<?php if (isset($this->row['id'])) echo "?id=" . $this->row['id'];?>&_cl_step=avatar"><?php echo gen_icon('picture');?>
+		<?php if (!isset($this->compactMode)):?> avatar<?php endif;?></a></li>
+		
+	<?php endif;?>    
+	<li <?php if ($page == 'source/index/search') echo "class='active';"?>><a href="/source/search"><?php echo gen_icon('search');?>
+	<?php if (!isset($this->compactMode)):?> Search<?php endif;?></a></li>
+</ul>
+
+<div style='min-height:10px;'></div>
+</div>

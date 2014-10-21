@@ -1,0 +1,78 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+
+<div class='row'>
+<?php 
+    $isPreview = is_modal_ajax();
+?>
+
+<?php if (isset($this->row)):?>
+<?php 
+    $row = $this->row;
+    //v($row);
+    $lu = Zend_Registry::get('user');
+?>
+<script type="text/javascript">
+CL.NID = "<?php echo $row['id']; ?>";
+</script>
+
+<div <?php if (!$isPreview) :?>class='col-md-6'<?php endif;?>>
+    <h4><a href='<?php echo node_link('story', $row);?>'><?php echo $row['name']?></a></h4>
+                                
+    <?php if (isset($row['tags'])):?>
+        <?php foreach ($row['tags'] as $tag):?>
+            <?php echo display_tag($tag);?>
+        
+        <?php endforeach;?>
+    <?php endif;?>
+    <?php if (isset($row['chapo'])):?>
+    <div class='chapo'>
+    <?php echo $row['chapo'];?>
+    </div>
+    <?php endif;?>
+    <div class='news-content'>
+    <?php echo $row['content'];?>
+    </div>
+    <?php endif;?>
+    
+    
+</div>
+<div <?php if (!$isPreview) :?>class='col-md-3'<?php endif;?>>
+     <div class="panel panel-default" >
+      <div class="panel-heading">
+        <h3 class="panel-title">Related news</h3>
+      </div>
+      <div class="panel-body" >
+          <?php if (count($row['related']) > 0):?>
+          <ul class='no-padding-ul'>
+              <?php foreach ($row['related'] as $st):?>
+              <?php if ($st['id'] != $row['id']):?>
+              <li><a href='<?php echo node_link('story', $st);?>'><?php echo $st['name'];?></a></li>
+              <?php endif;?>
+              <?php endforeach;?>
+          </ul>              
+          <?php endif;?>
+      </div>
+    </div>
+
+     <div class="panel panel-default" >
+      <div class="panel-heading">
+        <h3 class="panel-title">Hot news</h3>
+      </div>
+      <div class="panel-body" >
+          <?php echo $this->render('widget/hot-news.phtml');?>
+      </div>
+    </div>
+    
+</div>
+<div <?php if (!$isPreview) :?>class='col-md-3'<?php endif;?>>
+ <h3>QC</h3>
+</div>
+
+</div>
+<?php $this->inlineScript()->captureStart();?>
+$(function(){
+    url = $(location).attr('href');
+    var id = url.substr(url.indexOf("#") + 1);
+    $("#" + id + ">.comment").css({'background' : 'yellow'});
+});
+<?php $this->inlineScript()->captureEnd();?>

@@ -1,0 +1,222 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+	$row = $this->row;
+	//v($row);
+	//Zend_Registry::set('help_page', 'order_concepts');
+	$span1 = 'col-md-6';
+	$span2 = 'col-md-4';
+	$span3 = 'col-md-2';
+	
+	//find out children of this concept
+	
+	//todo : reorder conceptlist theo concepts_order
+	$items_sticky = $row['items_sticky'] ? $row['items_sticky'] : array('');
+	
+	//$row['items_order'] = sortWithStickedItems($row['items_order'],$row['items_sticky']);
+	if (isset($row['items_order']) && count($row['items_order']) > 0)
+	{
+		$items = sort_array_by_id($row['items'], $row['items_order']);
+	}
+
+    if ($row['items_type'] == 'category')
+    {
+    	$formClass = "Category_Form_Search";
+    	$attr = array(
+    			'method' => "POST",
+    			'action' => '/category/search'
+    	);
+    }
+    elseif ($row['items_type'] == 'story')
+	{
+    	$formClass = "Story_Form_Search";
+    	$attr = array(
+    			'method' => "POST",
+    			'action' => '/story/search'
+    	);
+    }
+    //Set step
+    $form = new $formClass();
+    //if (null !== $step)
+    $form->setStep('list_items_order');
+    $form->attributes = $attr;
+    $form->build($_REQUEST);
+    $this->form = $form;
+    if($row['items_type'] == 'story')
+        $form->category->setValue($row['prefich']);
+    $form->setAttrib('class', 'cl_ajax');
+    $form->setAttrib('id', 'search-form2');
+    $form->setAttrib('data-sand-callbacks', 'list-items-order-search-items');
+?>
+
+<div class='row'>
+<div class='<?echo $span1;?>'>   
+    <h3 style='margin-top:0px;'> 
+	    <?php echo node_anchor('list',$row);?>
+	    <span class='label label-default'><?php echo $row['slug'];?></span>
+    </h3>
+    Size: <?php if (isset($row['lim'])) echo $row['lim']; else echo "Unlimited";?>
+    
+   	<div class="concept-list order-item-list connectedSortable well" id="concept-list" 
+   	data-id='<?echo $row['id'];?>'
+   	data-item-name='item'
+   	data-href="/list/update?id=<?php echo $row['id'];?>&_cl_step=list_items_order" style='margin-left:0px;'>
+    <?php if(isset($items) && count($items) > 0) : ?>
+        <?php $total = 0;?>
+    	<?php foreach($items as $i => $q) :?>
+    		<?php $style="";?>
+			<?php $stick_title = t('stick_it',1);?>
+			<?php $sticked = 'no';?>
+			<?php if($items_sticky != ''):?>
+			<?php foreach($items_sticky as $sticky):?>
+			<?php   if($sticky == $q['id']):?>
+			<?php      $style="color:red;";
+			           $stick_title = t('sticked',1);
+			           $sticked = 'yes'?>
+			<?php   endif;
+		          endforeach;?>
+            <?php endif?>
+    		<?php if (isset($q['type']))
+    				$l = node_link($q['type'], $q);
+    		else 
+    			$l = node_link($row['items_type'], $q);
+    			?>
+    		<div id="<?php echo $q['id'];?>" 
+    			class="row sortable-item" 
+    			data-item-id="<?php echo $q['id'];?>" 
+                data-sticked="<?php echo $sticked;?>">
+                <div class='col-md-9'>
+                	<span class='item-index label label-default'><?php echo $i + 1;?></span>
+	                 <a class="concept modal_ajax" href="<?php echo $l;?>" >
+                        <span><?php echo $q['name'];?></span>
+	        		 </a>
+                </div>
+    		    
+    		    <div  class='col-md-3 '>
+    		    	<a href="javascript:void(0);" 
+    				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+    				   data-id="<?php echo $q['id'];?>">
+    				   <i class="<?php echo get_icon('remove')?>"></i>
+    				</a>
+    				<a href="javascript:void(0);" 
+    				   class="pull-right sticky"
+    				   title="<?php echo $stick_title;?>"
+    				   data-id="<?php echo $q['id'];?>"
+    				   data-sticked="<?php echo $sticked;?>"
+    				   >
+    				   <i class="<?php echo get_icon('pushpin')?>"  style="<?php echo $style;?>"></i>
+    				</a>
+    				
+				</div>
+    		</div>
+    	<?php endforeach;?>
+    <?php endif;?>
+   	</div>
+   	<div>
+   	<a href='javascript:void(0);' id='update-items-list' class='btn btn-primary'>Update</a>
+   	</div>
+   	
+    <textarea style='display: none;' id='item-template'>
+    		<div id="{{id}}" class="row sortable-item" data-item-id="{{id}}" data-sticked='no' >
+                <div class='col-md-9'>
+                <span class='item-index label label-default'>{{idx}}</span>
+                 <a class="concept modal_ajax" href="{{link}}">
+                        <span>
+                            <i class="icon-tag"></i>
+                                {{name}}
+            		    </span>
+        		    </a>
+    		    </div>
+    		    
+    		    <div  class='col-md-3'>
+    				<a href="javascript:void(0);" 
+    				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+    				   data-id="{{id}}">
+    				   <i class="<?php echo get_icon('remove')?>"></i>
+    				</a>
+    				<a href="javascript:void(0);" 
+    				   class="pull-right sticky" title="<?php echo t("stick_it",1);?>"
+    				   data-id="{{id}}" data-sticky=0>
+    				   <i class="<?php echo get_icon('pushpin')?>"></i>
+    				</a>
+				</div>
+    		</div>
+    </textarea>
+    
+    
+</div>
+
+
+<div class="<?echo $span2;?>">
+	<h3 class='margin-top-0'><?php echo $row['items_type'];?> to add</h3>
+	<div class='item-exists'>
+		<?php echo gen_icon('info-sign');?> Item with this background is already added;
+	</div>
+	<hr/>
+	<div id='search-results'>
+	
+	</div>
+	
+	<div>
+		<ul class='pagination' id='search-results-pagination' data-target-form-selector='#search-form2'>
+			<li class='active'><a href='#'>1</a></li>
+			<li><a href='#'>Next</a></li>
+		</ul>
+   	
+    	<textarea id='search-result-pagination-tpl' style='display:none;'>
+    	{{#list}}
+    		<li class="{{active}}">
+    			<a data-page={{page}} href='javascript:void(0);'>{{page_display}}</a>
+    		</li>
+    	{{/list}}
+    	</textarea>		
+	</div>
+	
+</div>
+<div class="<?php echo $span3;?>">
+	<div>
+    <h3 class='margin-top-0'>Filter <?php echo $row['items_type']?></h3>
+    </div>
+    	
+   	<div class='alert alert-warning'>
+   	TODO: Add category here if items_type == 'story'
+   	</div>
+    <div>
+    	<div class='well well-shallow'>
+    	<?php echo $form;?>
+    	</div>
+    	
+    	
+    	<textarea id='search-result-item-tpl' style='display:none;'>
+    	{{#result}}
+    		<div class='item-bank {{item-exists}}'
+    			title="{{title}}" 
+    			data-item-id='{{id}}'>
+    			<a href='{{link}}' class='preview modal_ajax label label-default'><?php echo gen_icon('preview');?></a>
+    				 
+    			<a title="click to add to list" class='add-concept-to-group' href='javascript:void(0);'><span class='item-index'>{{idx}}</span>. {{name}}</a>
+    			
+    		</div>
+    	{{/result}}
+    	</textarea>
+    </div>
+</div>
+
+	
+<?php //echo $this->render('index/concepts-order-js.phtml');?>	
+
+<?php 
+$this->headScript()->headScript()->prependFile(SAND_ASSETS_CDN . "/js/jquery-ui/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js");
+$this->headScript()->headScript()->prependFile(SAND_ASSETS_CDN . "/js/3rdparty/jquery.simulate.drag-sortable.js");
+$this->headScript()->headScript()->prependFile(ASSETS_CDN . "/js/dragndrop.js");
+$this->headLink()->appendStylesheet(SAND_ASSETS_CDN . "/js/jquery-ui/jquery-ui-1.10.3.custom/css/ui-lightness/jquery-ui-1.10.3.custom.css");
+$this->headScript()->headScript()->prependFile(ASSETS_CDN . "/js/list/order-items.js");
+?>
+</div>
+
+
+<style>
+.sortable-item span
+{
+	margin-right:3px;
+}
+</style>

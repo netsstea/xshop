@@ -1,0 +1,35 @@
+<?php if (APPLICATION_ENV == 'development'):?>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/jquery.js" type="text/javascript"></script>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/utils.js" type="text/javascript"></script>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/sand-utils.js" type="text/javascript"></script>
+    <script src="<?php echo ASSETS_CDN;?>/js/utils.js" type="text/javascript"></script>
+
+    <script src="<?php echo SAND_ASSETS_CDN;?>/bootstrap-3.0.0/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/plugins/toastmessage/src/main/javascript/jquery.toastmessage.js" type="text/javascript"></script>
+	<script src="<?php echo SAND_ASSETS_CDN;?>/js/3rdparty/hogan-2.0.0.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="<?php echo SAND_ASSETS_CDN;?>/js/plugins/tokeninput/src/jquery.tokeninput.js"></script>
+    
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/sand-callbacks-common.js" type="text/javascript"></script>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/sand-callbacks-metadata.js" type="text/javascript"></script>
+
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/site_common.js" type="text/javascript"></script>
+    
+    <script src="<?php echo ASSETS_CDN;?>/js/vi.js"></script>
+    
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/sand-ajax-link.js" type="text/javascript"></script>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/sand-ajax-form.js" type="text/javascript"></script>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/upload.js" type="text/javascript"></script>
+    
+	<script src="<?php echo SAND_ASSETS_CDN;?>/js/plugins/jquery.timeago.js"></script>    
+    
+	<script src="<?php echo SAND_ASSETS_CDN;?>/js/tinymce/tinymce/tinymce.min.js" type="text/javascript"></script>
+    <script src="<?php echo ASSETS_CDN;?>/js/tinymce4-init.js" type="text/javascript"></script>
+            
+    <script src="<?php echo ASSETS_CDN;?>/js/site.js" type="text/javascript"></script>
+    <script src="<?php echo SAND_ASSETS_CDN;?>/js/sand/comment.js" type="text/javascript"></script>
+    <script src="<?php echo ASSETS_CDN;?>/js/crop-avatar.js" type="text/javascript"></script>
+<?php else:?>
+	<script src="<?php echo ASSETS_CDN;?>/js/all.js?v=<?php echo gen_conf('js_version',1);?>" type="text/javascript"></script>
+<?php endif;?>

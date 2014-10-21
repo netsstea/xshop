@@ -1,0 +1,41 @@
+	<div class="navbar navbar-default navbar-fixed-top" id='user-admin-menu'>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i style='color:black;' class='<?php echo get_icon('home', $type = 'glyph');?>'></i></a>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+        
+          <ul class="nav navbar-nav" id='left-main-menu' >
+          			<li>
+              	        <a href='/site/admin' title='<?php echo t('admin_home',1);?>'><?php echo t('admin');?></a>
+              	    </li>
+              	    <li>
+              	        <a href='/story/search' title='<?php echo t('stories');?>'><?php echo t('stories', 1);?></a>
+              	    </li>
+              	    <li>
+              	        <a href='/category/index/search'><?php echo t('categories', 1);?></a>
+              	    </li>
+              	    <li>
+              	        <a href='/tag/index/search'><?php echo t('tags', 1);?></a>
+              	    </li>
+              	    <li>
+              	        <a href='/list/index/search'><?php echo t('lists', 1);?> / <?php echo t('GUI_widgets', 1);?></a>
+              	    </li>
+              	    <li>
+              	        <a href='/source/search'><?php echo t('news_site_sources', 1);?></a>
+              	    </li>
+              	    <li>
+              	        <a href='/media/browse'><?php echo t('media_manager', 1);?></a>
+              	    </li>
+              	    
+              	    <li>
+              	        <a href='/user/search'><?php echo t('users', 1)?></a>
+              	    </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+    </div>

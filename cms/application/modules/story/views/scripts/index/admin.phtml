@@ -1,0 +1,241 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+$lu = Zend_Registry::get('user');
+$redis = init_redis(RDB_CACHE_DB, true);
+ 
+?>
+<div class='separator'>
+</div>
+<div class='row'>
+
+<div class='col-md-2'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href='/story/search'><?php echo gen_icon('news');?> Stories</a>
+        <a class='pull-right' title='Add New story' href='/story/new'><?php echo gen_icon('plus');?></a>
+        </h3>
+      </div>
+      <div class="panel-body">
+		<div>
+	      	<a href="/story/search"><?php echo $redis->get(redis_key("new_story_counter",$lu['iid']));?> New stories</a>
+		</div>
+		<div>
+			<a href='/story/search-comment'>
+			  	<?php echo $redis->get(redis_key("new_comment_counter",$lu['iid']));?> Story comments
+			</a>
+		</div>
+      </div>
+    </div>
+</div>
+
+
+<div class='col-md-2'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	<a href='/list/search'><?php echo gen_icon('list-alt');?> Lists / GUI widgets</a>
+        	<a title='New widget' href='/list/new' class='pull-right'><?php echo gen_icon('plus');?></a>
+        	</h3>
+      </div>
+      <div class="panel-body">
+        <ul style='padding-left:5px;'>
+        	<li><a  href="/list/search?items_type=story">Story Lists</a></li>
+            <li><a  href="/list/search?items_type=category">Category Lists</a></li>
+     </ul>
+      </div>
+    </div>
+</div>
+ <?php  //$where = array('f' => 1);
+        $order = array('ts' => -1);
+        //$limit = 5;
+        $cond  =array('order' => $order);
+        $rs = Dao_Node_Category::getInstance()->findAll($cond);
+        if ($rs['success'])
+        {
+            $categories = $rs['result'];
+        }
+        
+?>
+<div class='col-md-2'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	<a href='/list/search'> Update Multiple Lists</a>
+    	</h3>
+      </div>
+      <div class="panel-body">
+      <?php foreach ($categories as $cat):?>
+        <ul style='padding-left:5px;'>
+            <li>
+                <a href='/list/multiupdate?prefich[]=<?php echo $cat['slug'];?>'> 
+                    <?php echo $cat['name']?></a>
+            </li>
+        </ul>
+        <?php endforeach;?>
+      </div>
+    </div>
+</div>
+
+
+<div class='col-md-2'>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href='/tag/index/search'><?php echo gen_icon('tag');?> Tags</a>
+        <a title='Add new tag' class='pull-right' href='/tag/index/new'><?php echo gen_icon('plus');?></a>
+        </h3>
+      </div>
+      <div class="panel-body">
+            <a  href="/tag/index/search?f=1">Current Hot Tag</a>
+                <ul style='padding-left:5px;'>
+                    <?php $where = array('f' => 1);
+                        $order = array('fts' => -1);
+                        $limit = 5;
+                        $cond  =array('where' => $where, 'order' => $order, 'limit' => $limit);
+                        $r = Dao_Node_Tag::getInstance()->find($cond);
+                        if ($r['success'])
+                        {
+                            $list = $r['result'];
+                        }
+                    ?>
+                    <?php foreach ($list as $row):?>
+                    <li>
+                        <?php echo display_tag($row);?>
+                     </li>
+                    <?php endforeach;?>
+                </ul>
+            
+            
+        </ul>
+      </div>
+    </div>
+</div>
+
+<div class='col-md-2 '>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	User
+        </h3>
+      </div>
+      <div class="panel-body">
+      		<a href='/user/update?id=<?php echo $lu['id'];?>'>Update</a>
+      </div>
+    </div>
+</div>
+
+<div class='col-md-2 '>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title" title="Websites to crawl">
+        	<a title='Website sources' href='/source/search'>
+        		<?php echo gen_icon('source');?> Sources
+        	</a>
+        	<a class='pull-right' title="new source" href='/source/new'><?php echo gen_icon('plus');?></a>
+        	</h3>
+      </div>
+      <div class="panel-body">
+			Hot Sources : vne : 5 items... 
+      </div>
+    </div>
+</div>
+
+
+<div class='col-md-2'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	<a href='#'><?php echo gen_icon('list-alt');?> Misc</a>
+        	</h3>
+      </div>
+      <div class="panel-body">
+        <ul style='padding-left:5px;'>
+        	<li><a  href="/template/search">Templates</a></li>
+        	<li><a  href="/site/api">API</a></li>
+        	<li><a href='/category/index/search?type=story'><?php echo gen_icon('category');?> Category</a></li>
+        	<li><a href='/category/index/new?type=story'><?php echo gen_icon('plus');?></a></li>
+        	
+     </ul>
+      </div>
+    </div>
+</div>
+</div> <?php //end row 1?>
+
+<hr/>
+
+<div class='row'>
+<?php 
+	$theme = Zend_Registry::get('theme');
+	$r = Dao_Node_Template::getInstance()->findAll(array('themes' => $theme));
+	if ($r['success'])
+	{
+		$templates = $r['result'];
+		foreach ($templates as $tpl):
+?>
+	<?php 
+		$lists = $tpl['lists'];
+		foreach ($lists as $i => $l)
+			$lists[$i] = $tpl['name'] . ":" . $l;
+	?>
+<div class='col-md-6'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+        	<a href='#'><?php echo gen_icon('list-alt');?> Template:: <?php echo $tpl['name']?></a>
+        	<a class='pull-right' href='/template/update?id=<?php echo $tpl['id'];?>'><?php echo gen_icon('edit');?></a>
+        </h3>
+      </div>
+      <div class="panel-body">
+      		<div>
+      			<?php foreach ($lists as $l):?>
+      				<label class='label label-default'><?php echo $l;?></label>
+      			<?php endforeach;?>
+      		</div>
+
+      		<div class='separator'></div>
+      		<div class='edit-list-for-category-template-wrapper' data-template='<?php echo $tpl['name'];?>'>
+      		Applicable categories:
+            	<select>
+            	<?php foreach ($tpl['categories'] as $cate):?>
+            	   <option value='<?php echo $cate;?>'><?php echo $cate?></option>
+            	<?php endforeach;?>
+            	</select>
+            	<a href='javascript:void(0);' class='edit-list-for-category-template'><?php echo gen_icon('edit');?></a>
+      		</div>
+      		<div class='well well-shallow'>
+	         <?php 
+    	         $this->renderMode = 'fake';
+	         	 $this->list = Dao_Node_Story::getInstance()->getFakeStoryLists($lists);
+	         	 echo $this->render("index/$theme/{$tpl['name']}.phtml");
+	         	//fake data and put to render
+	         ?>
+      		</div>
+      </div>
+    </div>
+</div>
+	
+	
+
+	<?php endforeach;?>
+	<?php 
+	}
+	?>
+</div>
+<style>
+.panel-body
+{
+    min-height:150px;
+}
+</style>
+
+
+<?php $this->inlineScript()->captureStart();?>
+$(document).ready(function(){
+   $(document).on('click', '.edit-list-for-category-template', function(){
+        var $wrapper = $(this).closest('.edit-list-for-category-template-wrapper');
+        var cate = $wrapper.find('select').val();
+        var template = $wrapper.data('template');
+        var url = "/story/multiupdate?template=" + template + "&category=" + cate;
+        document.location = url;
+   });
+});
+<?php $this->inlineScript()->captureEnd();?>

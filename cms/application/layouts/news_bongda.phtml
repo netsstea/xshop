@@ -1,0 +1,743 @@
+﻿<html>
+<head>
+
+	<link href="<?php echo SAND_ASSETS_CDN;?>bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<?php echo $this->render('news-js.phtml');?>
+	
+	<!-- Hiden - Show Menu - HaDuc 15.7-->
+    <!--	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" /> -->
+  	<link rel="stylesheet" href="<?php echo ASSETS_CDN;?>/css/bongda.css" type="text/css" media="screen" />
+  	<link rel="stylesheet" href="<?php echo ASSETS_CDN;?>/css/slide.css" type="text/css" media="screen" />
+  	
+	<script src="<?php echo ASSETS_CDN;?>/js/slide.js" type="text/javascript"></script>
+	
+	<script>
+	$(document).ready(function() {
+	    $("#panel").slideUp("slow").delay(800);	
+    }
+	</script>
+	
+</head>
+ <body>
+
+    <!-- Navbar
+    ================================================== -->
+	<!-- Panel -->
+	<div id="toppanel">
+	<div id="panel">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html"><img src="<?echo ASSETS_CDN;?>/img/soccer1.png" class="div-img"></i>Bongda.com</a>
+              </li>
+              <li class="">
+                <a href="./getting-started.html">Likescore & kết quả</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Tỷ lệ dự đoán</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Bảng xếp hạng - Lịch thi đấu</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Video</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Thư viện ảnh</a>
+              </li>
+              <li class="">
+                <a href="./customize.html">Dự đoán bóng đá</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="row">
+    <img src="<?echo ASSETS_CDN;?>/img/banner.png" height="200px" width="1366px"></img>
+	</div>
+<div class="navbar navbar-inverse navbar">
+      <div class="navbar-inner">
+        <div class="container">
+         
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+  				<li class="dropdown-submenu active">
+                    <a tabindex="-1" href="category.html"><img src="<?echo ASSETS_CDN;?>/img/soccer1.png" class="div-img"></img>Bóng đá Anh</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                      <li><a tabindex="-1" href="#">Giải ngoại hạng</a></li>
+                      <li><a tabindex="-1" href="#">BXH - Lịch thi đấu</a></li>
+                      <li><a tabindex="-1" href="#">Carling cup</a></li>
+                      <li><a tabindex="-1" href="#">Cup FA</a></li>
+                      <li><a tabindex="-1" href="#">Tin Khác</a></li>
+                    </ul>
+                </li>
+           
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Bóng đá TBN</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                </li>
+              <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Bóng đá Ý</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                </li>
+              <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Bóng đá Đức</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                </li>
+              <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Châu âu</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                </li>
+              <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Việt Nam</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                </li>
+             <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#">Thế giới</a>
+                    <ul class="dropdown-menu">
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                      <li><a tabindex="-1" href="#">Second level link</a></li>
+                    </ul>
+                </li>
+			  <li class="">
+                <a href="./customize.html">Hậu trường</a>
+              </li>
+			  <li class="">
+                <a href="./customize.html">Chuyển nhượng</a>
+              </li>
+          	
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	</div> 
+	<!--panel -->
+	<!-- The tab on top -->	
+	<div class="tab">
+		<ul class="login">
+			<li class="left">&nbsp;</li>
+			<li id="toggle">
+				<a id="open"  class="open" href="#">Show Menu</a>
+				<a id="close" style="display: none;"  class="close" href="#">Hiden</a>			
+			</li>
+			<li class="right">&nbsp;</li>
+		</ul> 
+	</div> <!-- / top -->
+	
+
+	</div>	 
+	
+
+	<div class="row">
+		<div class="col-md-9">
+			<div class="col-md-8">
+				<div id="myCarousel" class="carousel slide">
+				<ol class="carousel-indicators">
+				  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				  <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+				  <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+				</ol>
+				<div class="carousel-inner">
+				  <div class="item active">
+				    <img src="<?echo ASSETS_CDN;?>/img/anh1.jpg" alt=""></img>
+				    <div class="carousel-caption">
+				      <h4>First Thumbnail label</h4>
+				      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    </div>
+				  </div>
+				  <div class="item">
+				    <img src="<?echo ASSETS_CDN;?>/img/anh1.jpg" alt=""></img>
+				    <div class="carousel-caption">
+				      <h4>Second Thumbnail label</h4>
+				      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    </div>
+				  </div>
+				  <div class="item">
+				    <img src="<?echo ASSETS_CDN;?>/img/anh1.jpg" alt=""></img>
+				    <div class="carousel-caption">
+				      <h4>Third Thumbnail label</h4>
+				      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				    </div>
+				  </div>
+				</div>
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+			      </div>
+
+		</div><!--span8-->
+		<div class="col-md-8">
+			
+			
+						<div class="navbar navbar-inverse navbar">
+						      <div class="navbar-inner">
+							<div class="container">
+							 
+							  <div class="nav-collapse collapse">
+							    <ul class="nav">
+							      
+							      <li class="active">
+								<a href="contents.html"><img src="<?echo ASSETS_CDN;?>/img/soccer1.png" class="div-img">Chuyển nhượng</a>
+							      </li>
+							      <li class="">
+								<a href="./scaffolding.html">Tin đồn </a>
+							      </li>
+							      <li class="">
+								<a href="./base-css.html">Tin chuyển nhượng</a>
+							      </li>
+							      <li class="">
+								<a href="./components.html">Tổng hợp chuyển nhượng </a>
+							      </li>
+							    
+									 
+							     
+							    </ul>
+							  </div>
+							</div>
+						      </div>
+						    </div>
+			
+			<div class="col-md-4">
+				<img class="right" src="<?echo ASSETS_CDN;?>/img/anhvua2.jpg" alt=""></img>
+				<h4><a href="contents.html">Cập nhật danh sách chuyển nhượng mùa hè 2013</a></h4>
+				<p>Bongdaplus tổng hợp những vụ chuyển nhượng đã diễn ra trong ngày từ nay cho tới khi kỳ chuyển nhượng mùa 					Hè 2013 khép lại.</p>
+				<ul>
+					<li><a href="#">Chuyển nhượng Premier League: Ai đi, ai đến, cần ai?</a></li>
+					<li><a href="#">BongdaplusTV: Bản tin chuyển nhượng ngày 1/7</a></li>
+					<li><a href="#">10 vụ chuyển nhượng cao giá nhất Hè 2013 đã hoàn tất</a></li>
+					<li><a href="#">Cập nhật CHUYỂN NHƯỢNG mùa Hè sáng 1/7</a></li>
+				</ul>
+			</div><!--span4-->
+			<div class="col-md-3">
+				<h5><a href="#">Cập nhật chuyển nhượng mùa Hè sáng 2/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho1.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Paulinho khóc trong buổi công bố sẽ ký với Tottenham, Arsenal đón tân binh đầu tiên, Nolito rời Benfica sang...</p>
+				</div>
+				<h5><a href="#">Chelsea chi 30 triệu bảng cộng Torres để đổi lấy El Shaarawy</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho2.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Tờ SportMediaSet đưa tin Chelsea đã đẩy thương vụ chiêu mộ tiền đạo Stephan El Shaarawy lên tầm cao mới...<p>
+				</div>
+				<h5><a href="#">Tổng hợp CHUYỂN NHƯỢNG mùa Hè ngày 1/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho3.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thiago Silva thừa nhận được Barca liên hệ, Real đồng ý bán Kaka cho Sao Paulo, Milan có thể bán...<p>
+				</div>
+				<h5><a href="#">10 vụ chuyển nhượng "bom tấn" được chờ đợi Hè này</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho4.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thị trường chuyển nhượng Hè đã chính thức mở cửa hôm nay, chúng ta cùng chờ đợi một mùa 					Hè...<p>			
+				</div>			
+			</div>
+		</div><!--span8-->
+			<div class="col-md-8">
+			
+			
+				<div class="navbar navbar-inverse navbar">
+						      <div class="navbar-inner">
+							<div class="container">
+							 
+							  <div class="nav-collapse collapse">
+							    <ul class="nav">
+							      
+							      <li class="active">
+								<a href="./getting-started.html"><img src="<?echo ASSETS_CDN;?>/img/soccer1.png" class="div-img">Việt Nam</a>
+							      </li>
+							      <li class="">
+								<a href="./scaffolding.html">Lịch đấu </a>
+							      </li>
+							      <li class="">
+								<a href="./base-css.html">Kết quả</a>
+							      </li>
+							      <li class="">
+								<a href="./components.html">Xếp hạng </a>
+							      </li>
+							    
+									 
+							     
+							    </ul>
+							  </div>
+							</div>
+						      </div>
+						    </div>
+			
+			<div class="col-md-4">
+				<img class="right" src="<?echo ASSETS_CDN;?>/img/anhvua2.jpg" alt=""></img>
+				<h4><a href="#">Cập nhật danh sách chuyển nhượng mùa hè 2013</a></h4>
+				<p>Bongdaplus tổng hợp những vụ chuyển nhượng đã diễn ra trong ngày từ nay cho tới khi kỳ chuyển nhượng mùa 					Hè 2013 khép lại.</p>
+				<ul>
+					<li><a href="#">Chuyển nhượng Premier League: Ai đi, ai đến, cần ai?</a></li>
+					<li><a href="#">BongdaplusTV: Bản tin chuyển nhượng ngày 1/7</a></li>
+					<li><a href="#">10 vụ chuyển nhượng cao giá nhất Hè 2013 đã hoàn tất</a></li>
+					<li><a href="#">Cập nhật CHUYỂN NHƯỢNG mùa Hè sáng 1/7</a></li>
+				</ul>
+			</div><!--span4-->
+			<div class="col-md-3">
+				<h5><a href="#">Cập nhật chuyển nhượng mùa Hè sáng 2/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho1.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Paulinho khóc trong buổi công bố sẽ ký với Tottenham, Arsenal đón tân binh đầu tiên, Nolito rời Benfica sang...</p>
+				</div>
+				<h5><a href="#">Chelsea chi 30 triệu bảng cộng Torres để đổi lấy El Shaarawy</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho2.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Tờ SportMediaSet đưa tin Chelsea đã đẩy thương vụ chiêu mộ tiền đạo Stephan El Shaarawy lên tầm cao mới...<p>
+				</div>
+				<h5><a href="#">Tổng hợp CHUYỂN NHƯỢNG mùa Hè ngày 1/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho3.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thiago Silva thừa nhận được Barca liên hệ, Real đồng ý bán Kaka cho Sao Paulo, Milan có thể bán...<p>
+				</div>
+				<h5><a href="#">10 vụ chuyển nhượng "bom tấn" được chờ đợi Hè này</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho4.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thị trường chuyển nhượng Hè đã chính thức mở cửa hôm nay, chúng ta cùng chờ đợi một mùa 					Hè...<p>			
+				</div>			
+			</div>
+		</div><!--span8-->
+
+		<div class="col-md-8">
+			
+			
+				<div class="navbar navbar-inverse navbar">
+						      <div class="navbar-inner">
+							<div class="container">
+							 
+							  <div class="nav-collapse collapse">
+							    <ul class="nav">
+							      
+							      <li class="active">
+								<a href="./getting-started.html"><img src="<?echo ASSETS_CDN;?>/img/soccer1.png" class="div-img">Anh</a>
+							      </li>
+							      <li class="">
+								<a href="./scaffolding.html">Lịch đấu </a>
+							      </li>
+							      <li class="">
+								<a href="./base-css.html">Kết quả</a>
+							      </li>
+							      <li class="">
+								<a href="./components.html">Xếp hạng </a>
+							      </li>
+							    
+									 
+							     
+							    </ul>
+							  </div>
+							</div>
+						      </div>
+						    </div>
+			
+			<div class="col-md-4">
+				<img class="right" src="<?echo ASSETS_CDN;?>/img/anhvua2.jpg" alt=""></img>
+				<h4><a href="#">Cập nhật danh sách chuyển nhượng mùa hè 2013</a></h4>
+				<p>Bongdaplus tổng hợp những vụ chuyển nhượng đã diễn ra trong ngày từ nay cho tới khi kỳ chuyển nhượng mùa 					Hè 2013 khép lại.</p>
+				<ul>
+					<li><a href="#">Chuyển nhượng Premier League: Ai đi, ai đến, cần ai?</a></li>
+					<li><a href="#">BongdaplusTV: Bản tin chuyển nhượng ngày 1/7</a></li>
+					<li><a href="#">10 vụ chuyển nhượng cao giá nhất Hè 2013 đã hoàn tất</a></li>
+					<li><a href="#">Cập nhật CHUYỂN NHƯỢNG mùa Hè sáng 1/7</a></li>
+				</ul>
+			</div><!--span4-->
+			<div class="col-md-3">
+				<h5><a href="#">Cập nhật chuyển nhượng mùa Hè sáng 2/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho1.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Paulinho khóc trong buổi công bố sẽ ký với Tottenham, Arsenal đón tân binh đầu tiên, Nolito rời Benfica sang...</p>
+				</div>
+				<h5><a href="#">Chelsea chi 30 triệu bảng cộng Torres để đổi lấy El Shaarawy</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho2.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Tờ SportMediaSet đưa tin Chelsea đã đẩy thương vụ chiêu mộ tiền đạo Stephan El Shaarawy lên tầm cao mới...<p>
+				</div>
+				<h5><a href="#">Tổng hợp CHUYỂN NHƯỢNG mùa Hè ngày 1/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho3.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thiago Silva thừa nhận được Barca liên hệ, Real đồng ý bán Kaka cho Sao Paulo, Milan có thể bán...<p>
+				</div>
+				<h5><a href="#">10 vụ chuyển nhượng "bom tấn" được chờ đợi Hè này</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho4.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thị trường chuyển nhượng Hè đã chính thức mở cửa hôm nay, chúng ta cùng chờ đợi một mùa 					Hè...<p>			
+				</div>			
+			</div>
+		</div><!--span8-->
+
+		<div class="col-md-8">
+			
+			
+				<div class="navbar navbar-inverse navbar">
+						      <div class="navbar-inner">
+							<div class="container">
+							 
+							  <div class="nav-collapse collapse">
+							    <ul class="nav">
+							      
+							      <li class="active">
+								<a href="./getting-started.html"><img src="<?echo ASSETS_CDN;?>/img/soccer1.png" class="div-img">Chuyển nhượng</a>
+							      </li>
+							      <li class="">
+								<a href="./scaffolding.html">Tin đồn </a>
+							      </li>
+							      <li class="">
+								<a href="./base-css.html">Tin chuyển nhượng</a>
+							      </li>
+							      <li class="">
+								<a href="./components.html">Tổng hợp chuyển nhượng </a>
+							      </li>
+							    
+									 
+							     
+							    </ul>
+							  </div>
+							</div>
+						      </div>
+						    </div>
+			
+			<div class="col-md-4">
+				<img class="right" src="<?echo ASSETS_CDN;?>/img/anhvua2.jpg" alt=""></img>
+				<h4><a href="#">Cập nhật danh sách chuyển nhượng mùa hè 2013</a></h4>
+				<p>Bongdaplus tổng hợp những vụ chuyển nhượng đã diễn ra trong ngày từ nay cho tới khi kỳ chuyển nhượng mùa 					Hè 2013 khép lại.</p>
+				<ul>
+					<li><a href="#">Chuyển nhượng Premier League: Ai đi, ai đến, cần ai?</a></li>
+					<li><a href="#">BongdaplusTV: Bản tin chuyển nhượng ngày 1/7</a></li>
+					<li><a href="#">10 vụ chuyển nhượng cao giá nhất Hè 2013 đã hoàn tất</a></li>
+					<li><a href="#">Cập nhật CHUYỂN NHƯỢNG mùa Hè sáng 1/7</a></li>
+				</ul>
+			</div><!--span4-->
+			<div class="col-md-3">
+				<h5><a href="#">Cập nhật chuyển nhượng mùa Hè sáng 2/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho1.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Paulinho khóc trong buổi công bố sẽ ký với Tottenham, Arsenal đón tân binh đầu tiên, Nolito rời Benfica sang...</p>
+				</div>
+				<h5><a href="#">Chelsea chi 30 triệu bảng cộng Torres để đổi lấy El Shaarawy</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho2.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Tờ SportMediaSet đưa tin Chelsea đã đẩy thương vụ chiêu mộ tiền đạo Stephan El Shaarawy lên tầm cao mới...<p>
+				</div>
+				<h5><a href="#">Tổng hợp CHUYỂN NHƯỢNG mùa Hè ngày 1/7</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho3.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thiago Silva thừa nhận được Barca liên hệ, Real đồng ý bán Kaka cho Sao Paulo, Milan có thể bán...<p>
+				</div>
+				<h5><a href="#">10 vụ chuyển nhượng "bom tấn" được chờ đợi Hè này</a></h5>
+				<div class="div_left">			
+					<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho4.jpg" alt=""></img>
+				</div>			
+				<div class="div_right">			
+					<p>Thị trường chuyển nhượng Hè đã chính thức mở cửa hôm nay, chúng ta cùng chờ đợi một mùa 					Hè...<p>			
+				</div>			
+			</div>
+		</div><!--span8-->
+		</div><!--span9-->
+
+
+		<div class="col-md-4"><!--tab menu-->
+			<div class="tabbable"> <!-- Only required for left/right tabs -->
+  				<ul class="nav nav-tabs">
+    					<li class="active"><a href="#tab1" data-toggle="tab">Tin Mới nhất </a></li>
+    					<li><a href="#tab2" data-toggle="tab">Tin hót nhất</a></li>
+					
+  				</ul>
+  				<div class="tab-content">
+    					<div class="tab-pane active" id="tab1">
+						
+      						<div class="col-md-3">
+							<h5><a href="#">Cập nhật chuyển nhượng mùa Hè sáng 2/7</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho1.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Paulinho khóc trong buổi công bố sẽ ký với Tottenham, Arsenal đón tân binh đầu tiên, Nolito rời 						Benfica sang...</p>
+							</div>
+							<h5><a href="#">Chelsea chi 30 triệu bảng cộng Torres để đổi lấy El Shaarawy</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho2.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Tờ SportMediaSet đưa tin Chelsea đã đẩy thương vụ chiêu mộ tiền đạo Stephan El Shaarawy lên tầm cao 					mới...<p>
+							</div>
+							<h5><a href="#">Tổng hợp CHUYỂN NHƯỢNG mùa Hè ngày 1/7</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho3.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Thiago Silva thừa nhận được Barca liên hệ, Real đồng ý bán Kaka cho Sao Paulo, Milan có thể 				bán...<p>
+							</div>
+							<h5><a href="#">10 vụ chuyển nhượng "bom tấn" được chờ đợi Hè này</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho4.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Thị trường chuyển nhượng Hè đã chính thức mở cửa hôm nay, chúng ta cùng chờ đợi một mùa Hè...<p>			
+							</div>			
+						</div>
+    					</div>
+    					<div class="tab-pane" id="tab2">
+      						<p>Howdy, I'm in Section 2.</p>
+    					</div>
+  				</div>
+			</div>
+		</div><!--span4--><!--tab menu -->
+		
+			<div class="col-md-4"><!--tab menu-->
+			<div class="tabbable"> <!-- Only required for left/right tabs -->
+  				<ul class="nav nav-tabs">
+    					<li class="active"><a href="#tab3" data-toggle="tab">Đọc nhiều nhất</a></li>
+    					<li><a href="#tab4" data-toggle="tab">Comments nhiều nhất </a></li>
+					
+  				</ul>
+  				<div class="tab-content">
+    					<div class="tab-pane active" id="tab3">
+						
+      						<div class="col-md-3">
+							<h5><a href="#">Cập nhật chuyển nhượng mùa Hè sáng 2/7</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho1.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Paulinho khóc trong buổi công bố sẽ ký với Tottenham, Arsenal đón tân binh đầu tiên, Nolito rời 						Benfica sang...</p>
+							</div>
+							<h5><a href="#">Chelsea chi 30 triệu bảng cộng Torres để đổi lấy El Shaarawy</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho2.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Tờ SportMediaSet đưa tin Chelsea đã đẩy thương vụ chiêu mộ tiền đạo Stephan El Shaarawy lên tầm cao 					mới...<p>
+							</div>
+							<h5><a href="#">Tổng hợp CHUYỂN NHƯỢNG mùa Hè ngày 1/7</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho3.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Thiago Silva thừa nhận được Barca liên hệ, Real đồng ý bán Kaka cho Sao Paulo, Milan có thể 				bán...<p>
+							</div>
+							<h5><a href="#">10 vụ chuyển nhượng "bom tấn" được chờ đợi Hè này</a></h5>
+							<div class="div_left">			
+								<img class="right" src="<?echo ASSETS_CDN;?>/img/anhnho4.jpg" alt=""></img>
+							</div>			
+							<div class="div_right">			
+								<p>Thị trường chuyển nhượng Hè đã chính thức mở cửa hôm nay, chúng ta cùng chờ đợi một mùa Hè...<p>			
+							</div>			
+						</div>
+    					</div>
+    					<div class="tab-pane" id="tab4">
+      						<p>Howdy, I'm in Section 2.</p>
+    					</div>
+  				</div>
+			</div>
+		</div><!--span4--><!--tab menu -->
+
+		<div class="col-md-4">
+			<div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Video</h4></div>
+					
+				</div>
+			<div class="col-md-3">
+			<img src="http://img.youtube.com/vi/4O9pP8bcwDI/0.jpg"></img>
+			<p>Những video khó đỡ trong bóng đá 1</p>
+
+			</div><!--span3-->	
+			<div class="col-md-3">
+			<img src="http://img.youtube.com/vi/Zm-SRmqpdKA/0.jpg"></img>
+			<p>Những video khó đỡ trong bóng đá 2</p>
+			</div><!--span3-->
+			<div class="col-md-3">
+			<img src="http://img.youtube.com/vi/2EWiqmMiKRw/0.jpg"></img>
+			<p>Những video khó đỡ trong bóng đá 3</p>			
+			</div><!--span3-->	
+				
+		</div><!--span4-->
+		
+	<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FVietEd.vn&amp;width=360&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=true&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:360px; height:258px;" allowTransparency="true"></iframe>
+	</div><!--row-->
+	
+	
+	
+	
+	
+	
+	<div class="container">
+	
+	
+	
+	
+	     
+          <div class="row-fluid">
+            <div class="col-md-2">
+		<div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Bóng đá Anh </h4></div>
+					
+		</div>
+              <ul>
+			  <li><a href="#">Giải ngoại hạng</a></li>
+			  <li><a href="#">BXH - Lịch thi đấu </a></li>
+			  <li><a href="#">Carling cup </a></li>
+			  <li><a href="#">Tin khác </a></li>
+			  <li><a href="#">Cúp FA </a></li>
+			  </ul>
+            </div><!--/span-->
+            <div class="col-md-2">
+             <div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Bóng đá TBN</h4></div>
+					
+		</div>
+              <ul>
+			  <li><a href="#">La Liga </a></li>
+			  <li><a href="#">BXH - Lịch thi đấu </a></li>
+			  <li><a href="#">Segunda D1 </a></li>
+			  <li><a href="#">Cúp nhà vua </a></li>
+			  <li><a href="#">Tin khác </a></li>
+			  </ul>
+            </div><!--/span-->
+            <div class="col-md-2">
+             <div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Bóng đá Ý </h4></div>
+					
+		</div>
+              <ul>
+			 <li><a href="#">Seria A </a></li>
+			  <li><a href="#">BXH - Lịch thi đấu </a></li>
+			  <li><a href="#">Seria B</a></li>
+			  <li><a href="#">Cúp quốc gia </a></li>
+			  <li><a href="#">Tin khác </a></li>
+			  </ul>
+            </div><!--/span-->
+        
+         
+            <div class="col-md-2">
+             <div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Bóng đá Đức </h4></div>
+					
+		</div>
+              <ul>
+			 <li><a href="#">Bundesliga </a></li>
+			  <li><a href="#">BXH - Lịch thi đấu</a></li>
+			  <li><a href="#">Cúp quốc gia</a></li>
+			  <li><a href="#">Tin khác</a></li>
+			  
+			  </ul>
+            </div><!--/span-->
+            <div class="col-md-2">
+              <div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Châu Âu </h4></div>
+					
+		</div>
+              <ul>
+				
+			  <li><a href="#">Champions Leagues </a></li>
+			  <li><a href="#">Eropa Leagues </a></li>
+			  <li><a href="#">Tin khác</a></li>
+			 
+			  </ul>
+            </div><!--/span-->
+            <div class="col-md-2">
+              <div class="progress progress-danger">
+  					<div class="bar" style="width: 100%"><h4>Việt Nam </h4></div>
+					
+		</div>
+              <ul>
+			<li><a href="#">Lịch thi đấu bóng đá</a></li>
+			  <li><a href="#">Kết quả bóng đá</a></li>
+			  <li><a href="#">Tỷ lệ kèo độ bóng đá</a></li>
+			  <li><a href="#">Link sopcast</a></li>
+			  <li><a href="#">Bóng đá 24h</a></li>
+			  </ul>
+            </div><!--/span-->
+          </div><!--/row-->	 
+        
+     
+	  
+	</div>
+
+
+
+    <footer class="footer">
+      <div class="container">
+      <p> © BÁO BÓNG ĐÁ - TRANG THÔNG TIN ĐIỆN TỬ TỔNG HỢP. Giấy phép số 265/GP-TTĐT cấp ngày 20/12/2010.</p>
+<p>Tổng biên tập: Nguyễn Văn Phú. Phó Tổng biên tập: Vũ Trung Thành, Thạc Thị Thanh Thảo.</p>
+<p>Trụ sở: Tầng 6+7 tòa nhà Licogi 13, đường Khuất Duy Tiến, quận Thanh Xuân, Hà Nội.</p>
+<p>Điện thoại: (84.4) 35541188, (84.4) 35541199   |   Fax: (84.4) 35539898   |   Email: toasoan@bongdaplus.vn   |   Liên hệ Quảng cáo: 0963 88888 3.</p>
+
+      </div>
+    </footer>
+	
+</body>
+</html>

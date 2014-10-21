@@ -1,0 +1,66 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+$this->form->setAttrib('class', 'cl_ajax');
+?>
+<div class='separator'></div>
+
+<div class='row' >
+	<?php $page = Zend_Registry::get('page');?>
+	<div class='col-md-2'>
+		<?php echo $this->render('index/navbar.phtml');?>
+	</div>
+	<div class='col-md-10'>
+	<?php if($this->step == 'avatar'):?>
+		<h3><?php if ($page == 'story/index/update'):?>Update: <?php endif;?> <a target='_blank' href="<?php echo node_link('story', $this->row);?>"><?php if (get_value('_from') == 'new'):?>Step 2: <?php endif;?> <?php echo $this->row['name'];?></a></h3>
+        <?php echo $this->form;?>
+		<?php echo $this->render('widget/update-avatar.phtml');?>
+	<?php else:?>
+		<form method='POST' class='cl_ajax'>
+		<div class='row'>
+			<div class='col-md-7'>
+			<?php if ($page == 'story/index/new'):?>
+				<div class='story-type well well-shallow'>
+					<?php $type = get_value('type', 1);?>
+					<a href='/story/new?type=1' 
+						<?php if ($type == 1):?>class='dimmed'<?php endif;?>>
+						<?php echo gen_icon('story');?> <?php echo t('new_story');?></a> | 
+					<a href='/story/new?type=2' <?php if ($type == 2):?>class='dimmed'<?php endif;?>>
+						<?php echo gen_icon('picture');?> <?php echo t('new_image');?></a> |
+					<a href='/story/new?type=3' <?php if ($type == 3):?>class='dimmed'<?php endif;?>>
+					<?php echo gen_icon('video');?> <?php echo t('new_video');?></a>
+				</div>
+			<?php endif;?>
+			<?php echo $this->form->name;?>
+			<?php echo $this->form->content;?>
+			<?php echo $this->form->chapo;?>
+			</div>
+			<div class='col-md-5'>
+				<?php echo $this->form->avatar;?>
+				<?php echo $this->form->category;?>
+				<?php echo $this->form->suggest_tags;?>
+				<?php echo $this->form->tags;?>
+				<?php echo $this->form->status;?>
+				<?php echo $this->form->ourl;?>
+				<?php echo $this->form->list;?>
+				<?php echo $this->form->multicheck;?>
+				<?php //Hidden stuff?>
+				<?php echo $this->form->type;?>
+				<?php echo $this->form->_cl_submit;?>
+			</div>
+		</div>
+		</form>
+	<?php endif;?>
+	</div>
+</div>
+
+<?php $this->inlineScript()->captureStart();?>
+$(document).ready(function(){
+
+    $("#list-element").css({
+        "max-height":'100px', 
+        "overflow-y" : 'scroll',
+        'border' : '1px solid #eee',
+        'padding-left' : '5px'
+    });
+});
+<?php $this->inlineScript()->captureEnd();?>

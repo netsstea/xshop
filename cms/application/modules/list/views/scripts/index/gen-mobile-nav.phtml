@@ -1,0 +1,26 @@
+<ul data-role="listview" data-theme="e" data-divider-theme="e" style="margin-top:-16px;" class="nav-search">
+<?php
+/* 
+	<li data-icon="delete" style="background-color:#111;">
+		<a href="#" data-rel="close">Close Menu</a>
+	</li>
+*/	
+?>
+
+	<li data-filtertext="wai-aria voiceover accessibility screen reader">
+		<a href="javascript:void(0);" class='category-menu' data-cate-id='0' data-cate-slug='hot' data-title='News'>
+		Nổi bật</a>
+	</li>
+	
+    <?php foreach ($this->tree as $cate):?>
+    <?php if ($cate['pid'] === '0'):?>
+	<li data-filtertext="wai-aria voiceover accessibility screen reader">
+		<a href="javascript:void(0);" class='category-menu' 
+		data-cate-id='<?php echo $cate['id'];?>' data-cate-slug='<?php echo $cate['slug'];?>'
+		 data-title="<?php echo $cate['name'];?>"
+		>
+		<?php echo $cate['name']?></a>
+	</li>
+	<?php endif;?>
+	<?php endforeach;?>
+</ul>

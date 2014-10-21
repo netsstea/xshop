@@ -1,0 +1,124 @@
+<?php 
+    $lu =  Zend_Registry::get('user');
+    $page = 'home';
+    if (isset($_REQUEST['page']))
+        $page = $_REQUEST['page'];
+    if (Zend_Registry::isRegistered('page'))
+        $page = Zend_Registry::get('page');
+
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php echo Bootstrap::$pageTitle;?></title>
+    <meta name="description" content="<?php echo Bootstrap::$pageDesc;?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    
+
+	<link href="<?php echo SAND_ASSETS_CDN;?>bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<?php
+	/* 
+    <link href="<?php //echo ASSETS_CDN;?>/font-awesome-3.2.1/css/font-awesome.css" rel="stylesheet">
+    */
+	?>
+    <link href="<?php echo SAND_ASSETS_CDN;?>/css/common.css" media="screen" rel="stylesheet" type="text/css" >
+	<link href="<?php echo ASSETS_CDN;?>/css/styles.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="<?php echo SAND_ASSETS_CDN;?>/js/plugins/toastmessage/src/main/resources/css/jquery.toastmessage.css" rel="stylesheet" type="text/css"/>
+	<?php
+    echo $this->headLink();
+    ?>
+<?php
+/* 
+//else 
+//<link href="<?php echo ASSETS_CDN . "css/_v" . JSVERSION . ".css"?>" media="screen" rel="stylesheet" type="text/css" >
+// endif;
+ * 
+ */
+?>
+
+<style>
+div.navbar ul.breadcrumb > li
+{
+	min-height:30px;
+	padding-top:10px;
+}
+</style>
+<?php 
+$format = "DD/MM/YYYY";
+?>
+
+<script type='text/javascript'>
+<?php echo $this->render('widget/php-to-js.phtml');?>
+CL.DATE_FORMAT = "<?php echo substr(strtolower($format), 0, -2);?>";
+</script>
+	
+</head>
+<body>
+ 
+<?php echo $this->render("news.admin_menu.phtml");?>
+<div class='container' style='min-height:60px;'>
+</div>
+
+<div class='container' style='min-height:500px'>
+     <?php echo $this->layout()->content; ?>
+</div>
+
+<?php if (get_value('tinymce') != '1'):?>
+
+<div class=''>
+	<div class='col-md-12'>
+	    <div class='well'>
+        Copyright &copy; 2012 <strong>news.com</strong> <br/>
+        
+            <a href="/page/contact">Contact</a> · 
+            <a href="/page/about-us.html">About Us</a> · 
+            <a href="/page/privacy.html">Privacy</a> · 
+            <a href="/page/terms.html">Terms Of Service</a> · 
+            <a href="/page/help.html" title="Help on how to use the website">Help</a>
+        </div> 
+    </div>
+</div>
+
+
+<div id="ajaxModal" class="modal fade" 
+    tabindex="-1" role="dialog" aria-labelledby="ajaxModalLabel" aria-hidden="true"
+    role="dialog"
+>  
+    <div class="modal-dialog">
+    	<div class="modal-content">
+		    <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		        <h4 id="ajaxModalLabel"></h4>
+		    </div>
+		    
+		    <div class="modal-body">
+		    </div>
+		    
+		    <div class="modal-footer" style='display:none;'>
+		        <button class="btn" data-dismiss="modal" aria-hidden="true"><?php echo t('close',1);?></button>
+		        <button class="btn btn-primary" id="yes_help_thanks" ><i class='icon-ok'></i> <?php echo t('yes', 1);?></button>
+		    </div>
+	    </div>
+    </div>
+</div>
+<?php endif;?>
+
+<?php //if (APPLICATION_ENV == 'development') :?>
+<?php echo $this->render('news-js.phtml');?>
+		
+<?php 
+/*
+ * else :?>
+    <script type="text/javascript" src="<?php echo ASSETS_CDN."/js/_v".JSVERSION.".js";?>"></script>
+<?php endif;
+*
+*/
+?>
+        
+<?php echo $this->headScript();?>
+<?php print $this->inlineScript();?>
+</body>
+</html>
+

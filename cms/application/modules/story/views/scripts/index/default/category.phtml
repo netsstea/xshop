@@ -1,0 +1,223 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php
+//TODO: thuat toan hien thi top news, lam the nao de cac muc hien thi khac nhau
+/* 
+ * 
+ giua left,right,top1,top2 ( khong bi trung noi dung)
+ */
+	$list = $this->list;
+	$top1 = $list['category:top1'];
+	$top2 = $list['category:top2'];
+	$left = $list['category:left'];
+	$right = $list['category:right'];
+	$qc = $list['category:qc'];
+	$renderMode = isset($this->renderMode) ? $this->renderMode : '';
+	$theme = Zend_Registry::get('theme');
+	if ($renderMode == 'admin')
+	{
+	    $span1 = 12;
+	    $span2 = 0;
+	}
+	else 
+    {
+        $span1 = 9;
+        $span2 = 3;
+    }
+	     
+	    
+?>
+<div class="row">
+    <div class='col-md-<?echo $span1;?>' id='top-section'>
+    	<?php //home:hot_left?>
+    	<div class="row" id="box_news_top">
+        	<div class='col-md-8 justify' id='top1'>
+                <?php if ($renderMode == 'fake'):?>
+            	   <h3>top1</h3>
+            	<?php elseif ($renderMode == 'admin'):?>
+            	   <h3>top1 (<a href='javascript:void(0);' 
+            	                class='update-items-list btn btn-xs btn-primary'>
+            	                Update
+        	                 </a>)
+	               </h3>
+            	   <div class='connectedSortable' data-id='<?echo $top1[0]['id'];?>'
+                       	data-item-name='item'
+                       	data-href="/list/update?id=<?php echo $top1[0]['id'];?>&_cl_step=list_items_order" 
+                       	style='margin-left:0px;'>
+        	       <?php foreach ($top1 as $story):?>
+        	       <div class='card'  data-sticked="no"
+            			title="<?php echo t('click_to_preview_news',1);?>" 
+            			data-item-id='<?php echo $story['id'];?>'
+            			>
+            			<a href='<?php echo $story['link'];?>' target="_blank"> 
+                		   <span><?php echo $story['name'];?></span>
+            			</a>
+            			<a href="javascript:void(0);" 
+        				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('remove')?>"></i>
+        				</a>
+        				<a href="javascript:void(0);" 
+        				   class="pull-right sticky" title="<?php echo t("stick_it",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('pushpin')?>"></i>
+        				</a>
+            		</div>
+        	       <?php endforeach;?>
+        	   </div>
+            	<?php else:?>
+            	   <?php echo $this->render("index/{$theme}/category/top1.phtml");?>
+        	    <?php endif;?>
+        	   	
+        		
+        	</div>
+        	
+        	<div class='col-md-4 justify' id='top2'>
+        	<?php if ($renderMode == 'fake'):?>
+        	   <h3>top2</h3>
+        	<?php elseif ($renderMode == 'admin'):?>
+        	   <h3>top2</h3>
+        	   <div class='connectedSortable' data-id='<?echo $top2[0]['id'];?>'
+                   	data-item-name='item'
+                   	data-href="/list/update?id=<?php echo $top2[0]['id'];?>&_cl_step=list_items_order" 
+                   	style='margin-left:0px;'>
+        	       <?php foreach ($top2 as $story):?>
+        	       <div class='card'  data-sticked="no"
+            			title="<?php echo t('click_to_preview_news',1);?>" 
+            			data-item-id='<?php echo $story['id'];?>'
+            		    >
+            			<a href='<?php echo $story['link'];?>' target="_blank"> 
+                		   <span><?php echo $story['name'];?></span>
+            			</a>
+        			    <a href="javascript:void(0);" 
+        				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('remove')?>"></i>
+        				</a>
+        				<a href="javascript:void(0);" 
+        				   class="pull-right sticky" title="<?php echo t("stick_it",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('pushpin')?>"></i>
+        				</a>
+            		</div>
+        	       <?php endforeach;?>
+        	   </div>
+        	<?php else:?>
+            	 <?php echo $this->render("index/{$theme}/category/top2.phtml");?>
+        	<?php endif;?>
+        	</div>
+    
+    	</div>
+    	
+    	<div class="row">
+        	<div class='col-md-6 justify' id='home_left'>
+        	   <?php if ($renderMode == 'fake'):?>
+        	   <h3>left</h3>
+        	   <?php elseif ($renderMode == 'admin'):?>
+        	   <h3>left</h3>
+        	   <div class='connectedSortable' data-id='<?echo $top2[0]['id'];?>'
+                   	data-item-name='item'
+                   	data-href="/list/update?id=<?php echo $top2[0]['id'];?>&_cl_step=list_items_order" 
+                   	style='margin-left:0px;'>
+        	       <?php foreach ($left as $story):?>
+        	       <div class='card'  data-sticked="no"
+            			title="<?php echo t('click_to_preview_news',1);?>" 
+            			data-item-id='<?php echo $story['id'];?>'
+        		        >
+            			<a href='<?php echo $story['link'];?>' target="_blank"> 
+                		   <span><?php echo $story['name'];?></span>
+            			</a>
+            			<a href="javascript:void(0);" 
+        				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('remove')?>"></i>
+        				</a>
+        				<a href="javascript:void(0);" 
+        				   class="pull-right sticky" title="<?php echo t("stick_it",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('pushpin')?>"></i>
+        				</a>
+            		</div>
+        	       <?php endforeach;?>
+        	   </div>
+        	   <?php else:?>
+        	        <?php echo $this->render("index/{$theme}/category/left.phtml");?>
+        	   <?php endif;?>
+        		
+            </div>
+            <div class='col-md-6' id='home_right'>
+               <?php if ($renderMode == 'fake'):?>
+        	   <h3>right</h3>
+        	   <?php elseif ($renderMode == 'admin'):?>
+        	   <h3>right</h3>
+        	   <div class='connectedSortable' data-id='<?echo $top2[0]['id'];?>'
+                   	data-item-name='item'
+                   	data-href="/list/update?id=<?php echo $top2[0]['id'];?>&_cl_step=list_items_order"
+                   	style='margin-left:0px;'>
+        	       <?php foreach ($right as $story):?>
+        	       <div class='card'  data-sticked="no"
+            			title="<?php echo t('click_to_preview_news',1);?>" 
+            			data-item-id='<?php echo $story['id'];?>'
+            			>
+            			<a href='<?php echo $story['link'];?>' target="_blank"> 
+                		   <span><?php echo $story['name'];?></span>
+            			</a>
+            			<a href="javascript:void(0);" 
+        				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('remove')?>"></i>
+        				</a>
+        				<a href="javascript:void(0);" 
+        				   class="pull-right sticky" title="<?php echo t("stick_it",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('pushpin')?>"></i>
+        				</a>
+            		</div>
+        	       <?php endforeach;?>
+        	   </div>
+        	   <?php else:?>
+        	        <?php echo $this->render("index/{$theme}/category/right.phtml");?>
+        	   <?php endif;?>
+            </div>
+        </div>
+    </div>
+    
+    <?php if ($span2 != 0):?>
+    <div class='col-md-<?php echo $span2;?>' id='qc'>
+    	<?php if ($renderMode == 'fake'):?>
+        	   <h3>qc</h3>
+        	   <?php endif;?>
+        	   
+    	<div>
+    		<div class='connectedSortable' data-id='<?echo $top2[0]['id'];?>'
+               	 data-item-name='item'
+               	 data-href="/list/update?id=<?php echo $top2[0]['id'];?>&_cl_step=list_items_order" style='margin-left:0px;'>
+        	       <?php foreach ($qc as $story):?>
+        	       <div class='card'  data-sticked="no"
+            			title="<?php echo t('click_to_preview_news',1);?>" 
+            			data-item-id='<?php echo $story['id'];?>'
+            			>
+            			<a href='<?php echo $story['link'];?>' target="_blank"> 
+                		   <span><?php echo $story['name'];?></span>
+            			</a>
+            			<a href="javascript:void(0);" 
+        				   class="remove-from-list pull-right" title="<?php echo t("delete_from_list",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('remove')?>"></i>
+        				</a>
+        				<a href="javascript:void(0);" 
+        				   class="pull-right sticky" title="<?php echo t("stick_it",1);?>"
+        				   data-id="<?php echo $story['id'];?>">
+        				   <i class="<?php echo get_icon('pushpin')?>"></i>
+        				</a>
+            		</div>
+        	       <?php endforeach;?>
+        	   </div>
+    	</div>
+    </div>
+    <?php endif;?>
+</div>
+<div class='row'>
+	<div class='col-md-12'>
+		<hr/>
+	</div>
+</div>

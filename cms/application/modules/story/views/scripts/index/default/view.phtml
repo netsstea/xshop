@@ -1,0 +1,180 @@
+<?php 
+$theme = Zend_Registry::get('theme');
+?>
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+    $isPreview = is_modal_ajax();
+?>
+
+<?php if (!isset($this->row))
+	return;
+?>
+
+
+<?php 
+    $row = $this->row;
+    //v($row);
+    $lu = Zend_Registry::get('user');
+?>
+<script type="text/javascript">
+CL.NID = "<?php echo $row['id']; ?>";
+</script>
+
+<?php 
+	$class1= 'col-md-6';
+	$class2= 'col-md-3';
+	$class3= 'col-md-3';
+?>
+<div class='row small'>
+<div class='<?echo $class1;?>'>
+    <h1>
+    	<a class='news-heading' href='<?php echo node_link('story', $row);?>'><?php echo $row['name']?></a>
+    </h1>
+
+    <div id='story-ts' >
+    	<span class='pull-left'>
+    	<?php 
+    		$ts = isset($row['ots']) ?$row['ots'] : $row['ts'];
+    		 
+    		echo date('d/m/Y - h:i A', $ts);?>
+    	</span>
+          <div class="block_share pull-right">
+		    <a class="btn_facebook" rel="nofollow" 
+		    	href="javascript:;" title="Chia sẻ bài viết lên facebook">
+		    	<img alt="Chia sẻ bài viết lên facebook" src="<?php echo ASSETS_CDN;?>/images/vne/icon_fb.gif"></a>
+		    <a class="btn_twitter" rel="nofollow" href="javascript:;" 
+		    	id="twitter" 
+		    	data-url="http://bit.ly/1wHtXCD" 
+		    	title="Chia sẻ bài viết lên twitter">
+		    	<img alt="Chia sẻ bài viết lên twitter" src="<?php echo ASSETS_CDN;?>/images/vne/icon_tw.gif"></a>
+		    <a class="btn_google" rel="nofollow" href="javascript:;" title="Chia sẻ bài viết lên google+">
+		    	<img alt="Chia sẻ bài viết lên google+" 
+		    	src="<?php echo ASSETS_CDN;?>/images/vne/icon_google.gif"></a>
+		    <span class="drash_share">|</span>
+		    <a href="javascript:void(0);" onclick="common.printContent();" title="Print" rel="nofollow">
+		    	<img src="<?php echo ASSETS_CDN;?>/images/vne/icon_print.gif" alt=""></a>
+		    <a href="#" class="share_email_article">
+		    	<img src="<?php echo ASSETS_CDN;?>/images/vne/icon_letter.gif" alt=""></a>
+		</div>
+	</div>
+	
+	<div class='separator'></div>
+	
+	<div id='story-tags'>
+    <?php if (isset($row['tags'])):?>
+        <?php foreach ($row['tags'] as $tag):?>
+            <?php echo display_tag($tag);?>
+        <?php endforeach;?>
+    <?php endif;?>
+	</div>
+	                                 
+    <div class='separator'></div>
+    
+    
+    <?php if (isset($row['chapo'])):?>
+	    <div class='chapo'>
+	    <?php echo $row['chapo'];?>
+	    </div>
+    <?php endif;?>
+    <?php //v($row['source']);?>
+    <?php if (isset($row['top_related'])):?>
+    	<div class='top-related'>
+    		<?php $count = count($row['top_related']);?>
+    		<?php foreach ($row['top_related'] as $i => $s):?>
+    			<a href="<?echo node_link("story", $s);?>"><?php echo $s['name'];?></a>
+    			<?php if ($i != ($count -1)) :?> / <?php endif;?>
+    		<?php endforeach;?>
+    	</div>
+    <?php endif;?>
+    <div class='separator'></div>
+    
+    <div class='news-content'>
+    	<?php echo $row['content'];?>
+    </div>
+    
+    <?php if (isset($row['ourl']) && $row['ourl'] != '' ):?>
+    <div class='pull-right'>
+    Theo <a href="<?php echo $row['ourl'];?>">
+    	<?php if (isset($row['sourceInfo'])):?>
+    	<img style='height:25px;' class='img-reponsive' 
+    	src='<?php echo isset($row['sourceInfo']['avatar']) ? 
+    	                      $row['sourceInfo']['avatar'] : DEFAULT_AVATAR_URL ;?>'>
+    	<?php echo $row['sourceInfo']['name'];?>
+    	<?php else:?>
+    		Sưu tầm
+    	<?php endif;?>
+    </a>
+    </div>
+    <div class='clearfix'>
+    <?php //v($row);?>
+    </div>
+    <?php endif;?>
+    
+    <?php
+    /*
+     * 
+    <?php if (!$isPreview) :?>
+    <div style='min-height:20px;'><hr/></div>
+    <div><h5>Comments</h5></div>
+    <?php 
+        $this->comment_node_type = 'story';
+        if(!is_guest())
+            $this->can_comment = true;
+        else 
+            $this->can_comment = false;
+        echo $this->render("widget/comments-wrapper.phtml");
+    ?>
+    <?php endif;?>
+     */ 
+    ?>
+    <div class='separator-high'>
+    </div>
+    
+     <div class="panel panel-default" >
+      <div class="panel-heading">
+        <h3 class="panel-title">Related news</h3>
+      </div>
+      <div class="panel-body" >
+          <?php 
+          $where = array('category' => $row['category']);
+          $r = Dao_Node_Story::getInstance()->find(array('where' => $where, 'limit' => 10));
+          if($r['success'])
+          {
+          ?>
+          <ul class='no-padding-ul'>
+          	<?php foreach ($r['result'] as $related):?>
+          	<?php if ($related['id'] != $row['id']):?>
+              <li><a href='<?php echo node_link('story', $related);?>'><?php echo $related['name'];?></a>
+              (<?php echo date('d/m/Y', $related['ts']);?>)
+              </li>
+             <?php Endif;?>
+              <?php endforeach;?>
+          </ul>              
+          <?php }?>
+      </div>
+    </div>
+
+    <?php 
+    /*
+     <div class="panel panel-default" >
+      <div class="panel-heading">
+        <h3 class="panel-title">Hot news</h3>
+      </div>
+      <div class="panel-body" >
+          <?php echo $this->render('widget/hot-news.phtml');?>
+      </div>
+    </div>
+    */
+    ?>
+    
+</div>
+
+<div class='<?php echo $class2;?>' style='padding-left:0px;'>
+	<?php echo $this->render("index/$theme/home-top-news.phtml");?>
+</div>
+
+<div class='<?php echo $class3;?>' style='padding-left:0px;'>
+	<?php echo $this->render("index/$theme/right-menu.phtml");?>
+</div>
+
+</div>

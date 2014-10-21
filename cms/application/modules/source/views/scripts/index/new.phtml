@@ -1,0 +1,27 @@
+<?php echo sand_dev_info_phtml(__FILE__);?>
+<?php 
+$this->form->setAttrib('class', 'cl_ajax');
+?>
+<div class='row' >
+
+	<?php $page = Zend_Registry::get('page');?>
+	<div class='col-md-2'>
+		<?php echo $this->render('index/navbar.phtml');?>
+	</div>
+	
+	<div class='col-md-10'>
+		<?php if($this->step == 'avatar'):?>
+		<h3><a target='_blank' href="<?php echo node_link('story', $this->row);?>"><?php if (get_value('_from') == 'new'):?>Step 2: <?php endif;?> <?php echo $this->row['name'];?></a></h3>
+        <?php echo $this->form;?>
+		<?php echo $this->render('widget/update-avatar.phtml');?>
+		<?php else:?>
+	
+		<?php if ($page == 'source/index/update'):?>
+		<h3> <?php echo t('update_source',1);?></h3>
+		<?php else:?>
+		<h3> <?php echo t('add_new_source',1);?></h3>
+		<?php endif;?>
+		<?php $this->form->setAttrib('class', 'cl_ajax');?>
+		<?php echo $this->form;?>
+		<?php endif;?>
+</div>

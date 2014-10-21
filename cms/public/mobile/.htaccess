@@ -1,0 +1,2 @@
+AddType application/x-httpd-php .html
+SetEnv SERVER_URL "http://news.local"

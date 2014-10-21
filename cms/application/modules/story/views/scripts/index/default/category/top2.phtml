@@ -1,0 +1,30 @@
+<?php 
+$list = $this->list;
+$top2 = $list['category:top2'];
+?>
+<div id='top2-ul'>
+	<b>Latest news</b>
+	<ul class='no-margin no-bullet'>
+	<?php foreach ($top2 as $i => $item):?>
+		<li >
+			<?php if ($i == 0):?>
+			<div class=''>
+				<div >
+					<a class='dimmest' href='<?php echo $item['link'];?>'><?php echo $item['name'];?></a><br/>
+					<span class='timeago dimmed' title="<?php echo convert_ts_to_js($item['ts']);?>"></span>
+				</div>
+			
+			</div>
+			
+			<?php elseif ($i < 6):?>
+			<div>
+				<a class='dimmest' href="<?php echo $item['link'];?>">
+					<?php echo $item['name'];?>
+				</a> <br/>
+				<span class='dimmed timeago' title="<?php echo convert_ts_to_js($item['ts']);?>"></span>
+			</div>
+			<?php endif;?>
+		</li>
+	<?php endforeach;?>
+	</ul>
+</div>
