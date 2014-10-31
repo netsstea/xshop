@@ -1,9 +1,0 @@
-<?php
-//keys
-putenv('k=c65ff8694e5bad1c1a805f5aac721bdf');
-putenv('APPLICATION_ENV=productioncp');
-putenv('CODENAME=news');
-putenv('SITE=thuky');
-putenv('DEFINES=thuky');
-putenv('DATABASE=thuky');
-putenv('LANGUAGE=vn');

@@ -164,10 +164,6 @@ if($news_select == 1) {
 <?php } ?>
 <div id="taskbar">
   <div class="taskbar">
-	<div class="left"><!-- <?php echo $header; ?> -->
-		<a class="tba" href="http://sim.techone.vn/" target="_blank">Sim số đẹp</a>
-		<a class="tba" href="http://goldenone.vn/" target="_blank">Golden One</a>
-	</div>
 	<div class="right">
 		<div id="showuser"></div>
 		<?php if ($zones) { ?>
@@ -392,10 +388,8 @@ $(document).ready(function() {
 	</ul>
   </div>
   <div class="menuright"><ul class="mrul">
-	<li class="mrli"><a class="mratop" href="<?php echo $special; ?>">Hot Deals</a></li>
+	<li class="mrli"><a class="mratop" href="<?php echo $special; ?>">Sản phẩm mới</a></li>
 	<li class="mrli"><a class="mratop" href="product/khuyenmai/" target="_blank">Khuyến mãi</a></li>
-	<li class="mrli"><a class="mratop" href="info/68/huong-dan-mua-tra-gop.html">Bán trả góp</a></li>
-	<li class="mrli"><a class="mratop<?php if($daotaos) {echo ' mdrop';} ?>">Đào tạo</a>
 	<?php if($daotaos) { ?>
 	  <div class="dropdown_1column">
 		<div class="mcol">
