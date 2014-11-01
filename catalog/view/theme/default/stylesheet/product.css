@@ -478,7 +478,7 @@ cursor:pointer;
 }
 .pihotline {
 	font-size:16px;
-	padding-left:20px;
+	padding-left:2px;
 	margin-bottom:10px;
 }
 .pihotline span {
@@ -605,7 +605,6 @@ cursor:pointer;
 	right:200px;
 }
 #tab_description {
-	display:none;
 	border-bottom:1px solid #DFDFDF;
 	position:relative;
 	line-height: 1.7em;
@@ -888,14 +887,54 @@ a.CloseDesc:hover {
 .tbdrutgon .tbdrg_name {
 	width:100px;
 }
-#tab_technical_description {
-	display:none;
-	position:relative;
-	border-bottom:1px solid #DFDFDF;
-}
 #tab_technical_description.active {
 	display:block;
 }
+
+.cart-button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 30px;
+  padding-left: 70px;
+  position: relative;
+  background-color:rgb(41,127,184);
+  color:rgb(255,255,255);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+
+  -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
+}
+
+a.cart-button:hover {
+  color: yellow;
+}
+
+.cart-button:active {
+  margin-top: 2px;
+  margin-bottom: 13px;
+
+  -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true);
+}
+
+
+
 #tab_technical_description .cdarrow {
 	width:21px;
 	height:11px;

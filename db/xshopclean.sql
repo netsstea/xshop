@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 31, 2014 at 07:34 PM
+-- Generation Time: Nov 01, 2014 at 06:37 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -102,14 +102,16 @@ CREATE TABLE IF NOT EXISTS `category` (
   `icon_menu` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `icon_mobile` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=448 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=456 ;
 
 --
 -- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`category_id`, `image`, `parent_id`, `sort_order`, `date_added`, `date_modified`, `cshow`, `phukien_status`, `banner`, `icon_menu`, `icon_mobile`) VALUES
-(447, 'data/t317n_4701.jpg.png', 0, 0, '2014-11-01 00:56:07', '2014-11-01 00:56:07', 'menu=1', 0, 'data/t317n_4701.jpg.png', 'data/t317n_4701.jpg.png', 'data/t317n_4701.jpg.png');
+(454, 'data/pbo45011-front.png', 0, 2, '2014-11-01 23:36:24', '2014-11-01 23:38:40', 'thuonghieu=1', 0, 'data/pbo45011-back.png', 'data/pbo45011-aset.png', 'data/pbo45011-aset.png'),
+(455, 'data/gaastra-trainers-garboard-kids-navy-1.jpg', 0, 3, '2014-11-01 23:38:27', '2014-11-01 23:38:47', 'thuonghieu=1', 0, 'data/gaastra-trainers-garboard-kids-navy-2.jpg', 'data/gaastra-trainers-garboard-kids-navy-4.jpg', 'data/gaastra-trainers-garboard-kids-navy-3.jpg'),
+(453, 'data/giay-hieu-size_-41.42.43-1.jpg', 0, 1, '2014-11-01 23:31:31', '2014-11-01 23:31:31', 'thuonghieu=1', 0, 'data/giay-hieu-size_-41.42.43-2.jpg', 'data/giay-hieu-size_-41.42.43-2.jpg', 'data/giay-hieu-size_-41.42.43-2.jpg');
 
 -- --------------------------------------------------------
 
@@ -134,7 +136,9 @@ CREATE TABLE IF NOT EXISTS `category_description` (
 --
 
 INSERT INTO `category_description` (`category_id`, `language_id`, `name`, `meta_description`, `description`, `name_seo`, `keywords`) VALUES
-(447, 5, 'Gi&agrave;y thể thao', '', '', '', '');
+(453, 5, 'Gi&agrave;y Cruyff', '', '&lt;div&gt;\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Brand: Johan Cruyff&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Model: Cruyff Recopa Classics&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Country: H&amp;agrave; Lan&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;-------------------------------------------------------&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Gia c&amp;ocirc;ng tại Việt Nam theo đơn đặt h&amp;agrave;ng của Cruyff shoes.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Gender: Man shoes&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Upper: Leather ( Chất liệu da ở phần tr&amp;ecirc;n gi&amp;agrave;y ).&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Outsole: Rubber ( Chất liệu cao su cho đế gi&amp;agrave;y ).&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;------------------------------------------------------&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Gi&amp;aacute; Ch&amp;iacute;nh H&amp;atilde;ng: &amp;euro; 69 - &amp;euro;&amp;nbsp;129,95 ( Khoảng 2.100.000 - 3.800.000 VND )&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:large&quot;&gt;&lt;span style=&quot;font-family:book antiqua,palatino&quot;&gt;&lt;span style=&quot;color:#000000&quot;&gt;Tham Khảo&amp;nbsp; www.cruyffclassics.com &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;cruyff&quot; src=&quot;http://xshop.local/image/data/giay-hieu-size_-41.42.43-0.jpg&quot; style=&quot;height:374px; width:564px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/giay-hieu-size_-41.42.43-0-new.jpg&quot; style=&quot;height:374px; width:564px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/giay-hieu-size_-41.42.43-1.jpg&quot; style=&quot;height:374px; width:564px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/giay-hieu-size_-41.42.43-2.jpg&quot; style=&quot;height:374px; width:564px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/giay-hieu-size_-41.42.43-3.jpg&quot; style=&quot;height:374px; width:564px&quot; /&gt;&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', ''),
+(454, 5, 'Gi&agrave;y PME Legend', '', '&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/pbo45011-aset.png&quot; style=&quot;height:90px; width:90px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/pbo45011-back.png&quot; style=&quot;height:90px; width:90px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/pbo45011-front.png&quot; style=&quot;height:90px; width:90px&quot; /&gt;&lt;/p&gt;\r\n', '', ''),
+(455, 5, 'Gi&agrave;y GAASTAR', '', '&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/gaastra-trainers-garboard-kids-navy-1.jpg&quot; style=&quot;height:520px; width:520px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/gaastra-trainers-garboard-kids-navy-2.jpg&quot; style=&quot;height:520px; width:520px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/gaastra-trainers-garboard-kids-navy-3.jpg&quot; style=&quot;height:520px; width:520px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/gaastra-trainers-garboard-kids-navy-4.jpg&quot; style=&quot;height:520px; width:520px&quot; /&gt;&lt;/p&gt;\r\n', '', '');
 
 -- --------------------------------------------------------
 
@@ -166,7 +170,14 @@ CREATE TABLE IF NOT EXISTS `chome` (
   `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`chome_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `chome`
+--
+
+INSERT INTO `chome` (`chome_id`, `sort_order`, `image`, `link`) VALUES
+(13, 0, 'no_image.jpg', 'http://xshop.local/image/cache/data/t317n_4701.jpg-100x100.png');
 
 -- --------------------------------------------------------
 
@@ -180,6 +191,13 @@ CREATE TABLE IF NOT EXISTS `chome_description` (
   `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`chome_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `chome_description`
+--
+
+INSERT INTO `chome_description` (`chome_id`, `language_id`, `name`) VALUES
+(13, 5, 'Gi&agrave;y thể thao');
 
 -- --------------------------------------------------------
 
@@ -203,9 +221,7 @@ INSERT INTO `cinformation` (`cinformation_id`, `sort_order`, `cshow`) VALUES
 (2, 0, 'footer'),
 (3, 0, 'header'),
 (4, 0, 'product'),
-(5, 0, 'sidebar'),
-(9, 0, 'dichvu'),
-(10, 0, 'daotao');
+(5, 0, 'sidebar');
 
 -- --------------------------------------------------------
 
@@ -229,9 +245,7 @@ INSERT INTO `cinformation_description` (`cinformation_id`, `language_id`, `name`
 (2, 5, 'Th&ocirc;ng tin c&ocirc;ng ty'),
 (3, 5, 'Th&ocirc;ng tin Header'),
 (4, 5, 'Hiển thị ở chi tiết sản phẩm'),
-(5, 5, 'Hiển thị thanh b&ecirc;n phải'),
-(9, 5, 'Dịch vụ'),
-(10, 5, 'Đ&agrave;o tạo');
+(5, 5, 'Hiển thị thanh b&ecirc;n phải');
 
 -- --------------------------------------------------------
 
@@ -516,7 +530,7 @@ CREATE TABLE IF NOT EXISTS `extension` (
   `type` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=283 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=284 ;
 
 --
 -- Dumping data for table `extension`
@@ -590,14 +604,53 @@ CREATE TABLE IF NOT EXISTS `history` (
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`history_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `history`
 --
 
 INSERT INTO `history` (`history_id`, `user_id`, `generic`, `code`, `date_added`, `username`) VALUES
-(1, 20, 'category_add', 'category_id=447', '2014-11-01 00:56:07', 'netsstea');
+(1, 20, 'category_add', 'category_id=447', '2014-11-01 00:56:07', 'netsstea'),
+(2, 20, 'cinformation_delete', 'cinformation_id=list_9', '2014-11-01 01:37:35', 'netsstea'),
+(3, 20, 'cinformation_delete', 'cinformation_id=list_10', '2014-11-01 01:37:38', 'netsstea'),
+(4, 20, 'information_add', 'information_id=78', '2014-11-01 01:39:24', 'netsstea'),
+(5, 20, 'information_add', 'information_id=79', '2014-11-01 01:40:03', 'netsstea'),
+(6, 20, 'product_add', 'product_id=2695', '2014-11-01 19:41:42', 'netsstea'),
+(7, 20, 'product_updateprice', 'product_id=2695', '2014-11-01 19:41:52', 'netsstea'),
+(8, 20, 'product_updateprice', 'product_id=2695', '2014-11-01 19:41:59', 'netsstea'),
+(9, 20, 'category_add', 'category_id=448', '2014-11-01 19:48:50', 'netsstea'),
+(10, 20, 'category_add', 'category_id=449', '2014-11-01 19:49:21', 'netsstea'),
+(11, 20, 'category_edit', 'category_id=449', '2014-11-01 19:49:55', 'netsstea'),
+(12, 20, 'category_add', 'category_id=450', '2014-11-01 19:50:21', 'netsstea'),
+(13, 20, 'category_add', 'category_id=451', '2014-11-01 19:50:57', 'netsstea'),
+(14, 20, 'category_add', 'category_id=452', '2014-11-01 19:51:25', 'netsstea'),
+(15, 20, 'product_edit', 'product_id=2695', '2014-11-01 19:53:12', 'netsstea'),
+(16, 20, 'product_edit', 'product_id=2695', '2014-11-01 19:54:32', 'netsstea'),
+(17, 20, 'product_add', 'product_id=2696', '2014-11-01 19:56:04', 'netsstea'),
+(18, 20, 'product_delete', 'product_id=list_2695', '2014-11-01 19:56:10', 'netsstea'),
+(19, 20, 'product_edit', 'product_id=2696', '2014-11-01 19:57:35', 'netsstea'),
+(20, 20, 'manufacturer_add', 'manufacturer_id=1', '2014-11-01 19:58:09', 'netsstea'),
+(21, 20, 'manufacturer_add', 'manufacturer_id=2', '2014-11-01 19:58:38', 'netsstea'),
+(22, 20, 'manufacturer_add', 'manufacturer_id=3', '2014-11-01 19:58:59', 'netsstea'),
+(23, 20, 'manufacturer_edit', 'manufacturer_id=1', '2014-11-01 20:01:26', 'netsstea'),
+(24, 20, 'manufacturer_edit', 'manufacturer_id=2', '2014-11-01 20:01:35', 'netsstea'),
+(25, 20, 'manufacturer_edit', 'manufacturer_id=3', '2014-11-01 20:01:39', 'netsstea'),
+(26, 20, 'product_add', 'product_id=2697', '2014-11-01 20:03:16', 'netsstea'),
+(27, 20, 'product_updateprice', 'product_id=list_2697_2696', '2014-11-01 20:04:39', 'netsstea'),
+(28, 20, 'category_delete', 'category_id=list_449_448_450_451_452_447', '2014-11-01 23:23:46', 'netsstea'),
+(29, 20, 'product_delete', 'product_id=list_2697_2696', '2014-11-01 23:23:52', 'netsstea'),
+(30, 20, 'category_add', 'category_id=453', '2014-11-01 23:31:31', 'netsstea'),
+(31, 20, 'category_add', 'category_id=454', '2014-11-01 23:36:24', 'netsstea'),
+(32, 20, 'category_add', 'category_id=455', '2014-11-01 23:38:27', 'netsstea'),
+(33, 20, 'category_edit', 'category_id=454', '2014-11-01 23:38:40', 'netsstea'),
+(34, 20, 'category_edit', 'category_id=455', '2014-11-01 23:38:47', 'netsstea'),
+(35, 20, 'product_add', 'product_id=2698', '2014-11-01 23:44:47', 'netsstea'),
+(36, 20, 'product_edit', 'product_id=2698', '2014-11-01 23:45:58', 'netsstea'),
+(37, 20, 'review_add', 'review_id=1', '2014-11-01 23:52:58', 'netsstea'),
+(38, 20, 'product_edit', 'product_id=2698', '2014-11-01 23:56:15', 'netsstea'),
+(39, 20, 'slideshow_add', 'slideshow_id=1', '2014-11-02 00:07:47', 'netsstea'),
+(40, 20, 'slideshow_add', 'slideshow_id=2', '2014-11-02 00:08:11', 'netsstea');
 
 -- --------------------------------------------------------
 
@@ -612,7 +665,15 @@ CREATE TABLE IF NOT EXISTS `information` (
   `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`information_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=78 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=80 ;
+
+--
+-- Dumping data for table `information`
+--
+
+INSERT INTO `information` (`information_id`, `sort_order`, `cinformation_id`, `link`, `image`) VALUES
+(79, 0, 1, '', ''),
+(78, 0, 2, '', 'data/t317n_4701.jpg.png');
 
 -- --------------------------------------------------------
 
@@ -630,6 +691,14 @@ CREATE TABLE IF NOT EXISTS `information_description` (
   `keywords` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`information_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `information_description`
+--
+
+INSERT INTO `information_description` (`information_id`, `language_id`, `name`, `description`, `name_seo`, `meta_description`, `keywords`) VALUES
+(78, 5, 'Giới thiệu X-Shop', '&lt;p&gt;X-Shop l&amp;agrave; của h&amp;agrave;ng chuy&amp;ecirc;n b&amp;aacute;n bu&amp;ocirc;n b&amp;aacute;n lẻ gi&amp;agrave;y thể thao xuất khẩu, với c&amp;aacute;c thương hiệu đến từ ch&amp;acirc;u &amp;acirc;u&lt;/p&gt;\r\n', '', '', ''),
+(79, 5, 'Hỗ trợ kh&aacute;ch h&agrave;ng', '&lt;p&gt;Đường d&amp;acirc;y n&amp;oacute;ng : 0977946017&lt;br /&gt;\r\n&amp;nbsp;&lt;/p&gt;\r\n', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -672,7 +741,16 @@ CREATE TABLE IF NOT EXISTS `manufacturer` (
   `icon_menu` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `banner` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`manufacturer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `manufacturer`
+--
+
+INSERT INTO `manufacturer` (`manufacturer_id`, `image`, `sort_order`, `menu_status`, `icon_menu`, `banner`) VALUES
+(1, 'data/cc143004203993.jpg', 1, 0, 'data/cc143004203993.jpg', 'data/cc143004203993.jpg'),
+(2, 'data/gaastra-trainers-regiment-men-greybue-2.jpg', 2, 0, 'data/gaastra-trainers-regiment-men-greybue-2.jpg', 'data/gaastra-trainers-regiment-men-greybue-2.jpg'),
+(3, 'data/templatelisterouterglow1.jpg', 3, 0, 'data/templatelisterouterglow1.jpg', 'data/templatelisterouterglow1.jpg');
 
 -- --------------------------------------------------------
 
@@ -686,6 +764,15 @@ CREATE TABLE IF NOT EXISTS `manufacturer_description` (
   `name` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`manufacturer_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `manufacturer_description`
+--
+
+INSERT INTO `manufacturer_description` (`manufacturer_id`, `language_id`, `name`) VALUES
+(3, 5, 'PME Legend'),
+(2, 5, 'GAASTAR'),
+(1, 5, 'Cruyff');
 
 -- --------------------------------------------------------
 
@@ -1000,7 +1087,14 @@ CREATE TABLE IF NOT EXISTS `product` (
   `stock_status_id_hc` int(11) NOT NULL,
   `total_promotion_hc` decimal(15,0) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2695 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2699 ;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`product_id`, `model`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `measurement_class_id`, `status`, `date_added`, `date_modified`, `viewed`, `warranty`, `chome_id`, `sku`, `location`, `sort_order`, `category_id`, `total_promotion`, `360do`, `template`, `price_hc`, `stock_status_id_hc`, `total_promotion_hc`) VALUES
+(2698, '1', 10, 1, 'data/giay-hieu-size_-41.42.43-3.jpg', 0, 1, 500000, 0, '2014-11-01', 0.00, 1, 0.00, 0.00, 0.00, 1, 1, '2014-11-01 23:44:47', '2014-11-01 23:56:15', 28, '0', 0, '', 0, 0, 453, 0, NULL, '', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1035,7 +1129,14 @@ CREATE TABLE IF NOT EXISTS `product_description` (
   `promotion_hc` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`product_id`,`language_id`),
   KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2699 ;
+
+--
+-- Dumping data for table `product_description`
+--
+
+INSERT INTO `product_description` (`product_id`, `language_id`, `name`, `meta_description`, `description`, `tags`, `brief_description`, `technical_description`, `promotion`, `name_seo`, `promotion_hc`) VALUES
+(2698, 5, 'Cruyff Recopa Classics', 'H&agrave;ng Việt Nam Xuất Khẩu\r\n\r\nBrand: Johan Cruyff\r\n\r\nModel: Cruyff Recopa Classics\r\n\r\nCountry: H&agrave; Lan', '<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Gia c&ocirc;ng tại Việt Nam theo đơn đặt h&agrave;ng của Cruyff shoes.</span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Gender: Man shoes</span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Upper: Leather ( Chất liệu da ở phần tr&ecirc;n gi&agrave;y ).</span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Outsole: Rubber ( Chất liệu cao su cho đế gi&agrave;y ).</span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino">------------------------------------------------------</span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Gi&aacute; Ch&iacute;nh H&atilde;ng: &euro;&nbsp;129,95 ( Khoảng 3.800.000 VND )</span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Tham Khảo&nbsp; www.cruyffclassics.com </span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">Gi&aacute; Web X-Shop : 500.000 VND.</span></span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino">-------------------------------------------------------</span></span></strong></p>\r\n\r\n<p><strong><span style="font-size:large"><span style="font-family:book antiqua,palatino"><span style="color:#000000">* Ch&uacute;ng t&ocirc;i chỉ c&oacute; size như tr&ecirc;n website ngo&agrave;i ra kh&ocirc;ng c&oacute; size kh&aacute;c.</span></span></span></strong></p>\r\n', 'cruyff, johan cruyff,shoes,giay', '', '', '', 'Gi&agrave;y Cruyff Recopa Classics', '');
 
 -- --------------------------------------------------------
 
@@ -1071,7 +1172,17 @@ CREATE TABLE IF NOT EXISTS `product_image` (
   `slide_status` int(1) NOT NULL DEFAULT '0',
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`product_image_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `product_image`
+--
+
+INSERT INTO `product_image` (`product_image_id`, `product_id`, `image`, `color_id`, `title_image`, `description_image`, `slide_status`, `sort_order`) VALUES
+(8, 2698, 'data/giay-hieu-size_-41.42.43-1.jpg', 1, 'Logo thương hiệu cruyff', '', 1, 3),
+(7, 2698, 'data/giay-hieu-size_-41.42.43-0.jpg', 1, 'Mặt ch&eacute;o', '', 1, 2),
+(6, 2698, 'data/giay-hieu-size_-41.42.43-0-new.jpg', 1, 'Mặt trước', 'Chất liệu da cực đẹp v&agrave; bền', 1, 1),
+(9, 2698, 'data/giay-hieu-size_-41.42.43-3.jpg', 1, 'Nh&igrave;n tổng thể', '', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -1198,6 +1309,13 @@ CREATE TABLE IF NOT EXISTS `product_to_category` (
   PRIMARY KEY (`product_id`,`category_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `product_to_category`
+--
+
+INSERT INTO `product_to_category` (`product_id`, `category_id`) VALUES
+(2698, 453);
+
 -- --------------------------------------------------------
 
 --
@@ -1209,6 +1327,13 @@ CREATE TABLE IF NOT EXISTS `product_to_chome` (
   `chome_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`chome_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product_to_chome`
+--
+
+INSERT INTO `product_to_chome` (`product_id`, `chome_id`) VALUES
+(2698, 13);
 
 -- --------------------------------------------------------
 
@@ -1258,14 +1383,7 @@ CREATE TABLE IF NOT EXISTS `redirect_url` (
   `url_goc` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `url_dich` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`redirect_url_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `redirect_url`
---
-
-INSERT INTO `redirect_url` (`redirect_url_id`, `url_goc`, `url_dich`) VALUES
-(1, 'http://xshop.local/product/khuyenmai/', 'http://xshop.local/product/khuyenmai/');
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -1284,7 +1402,14 @@ CREATE TABLE IF NOT EXISTS `review` (
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`review_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`review_id`, `product_id`, `customer_id`, `author`, `text`, `rating`, `status`, `date_added`, `date_modified`) VALUES
+(1, 2698, 0, 'Bodoicuho', 'Gi&agrave;y rất tốt\r\nCảm ơn shop rất nhiều :D', 5, 1, '2014-11-01 23:52:58', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1298,7 +1423,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `key` varchar(64) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `value` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=53199 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=53798 ;
 
 --
 -- Dumping data for table `setting`
@@ -1319,9 +1444,9 @@ INSERT INTO `setting` (`setting_id`, `group`, `key`, `value`) VALUES
 (21914, 'tax', 'tax_sort_order', '5'),
 (21916, 'total', 'total_sort_order', '6'),
 (21915, 'total', 'total_status', '1'),
-(48635, 'news', 'news_sort_order', '1'),
-(48634, 'news', 'news_status', '1'),
-(48633, 'news', 'news_position', 'left'),
+(53787, 'news', 'news_sort_order', '1'),
+(53786, 'news', 'news_status', '0'),
+(53785, 'news', 'news_position', 'left'),
 (22316, 'google_base', 'google_base_status', '1'),
 (21809, 'free', 'free_status', '1'),
 (21808, 'free', 'free_geo_zone_id', '0'),
@@ -1329,8 +1454,7 @@ INSERT INTO `setting` (`setting_id`, `group`, `key`, `value`) VALUES
 (22317, 'google_sitemap', 'google_sitemap_status', '1'),
 (21810, 'free', 'free_sort_order', '1'),
 (45715, 'category_news', 'category_news_status', '0'),
-(52945, 'google_analytics', 'google_analytics_status', '1'),
-(52944, 'google_analytics', 'google_analytics_code', '&lt;script&gt;\r\n  (function(i,s,o,g,r,a,m){i[&#039;GoogleAnalyticsObject&#039;]=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,&#039;script&#039;,&#039;//www.google-analytics.com/analytics.js&#039;,&#039;ga&#039;);\r\n\r\n  ga(&#039;create&#039;, &#039;UA-43488629-1&#039;, &#039;techone.vn&#039;);\r\n  ga(&#039;send&#039;, &#039;pageview&#039;);\r\n\r\n&lt;/script&gt;'),
+(53565, 'google_analytics', 'google_analytics_code', '&lt;script&gt;\r\n  (function(i,s,o,g,r,a,m){i[&#039;GoogleAnalyticsObject&#039;]=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,&#039;script&#039;,&#039;//www.google-analytics.com/analytics.js&#039;,&#039;ga&#039;);\r\n\r\n  ga(&#039;create&#039;, &#039;UA-43488629-1&#039;, &#039;xshophanoi.com&#039;);\r\n  ga(&#039;send&#039;, &#039;pageview&#039;);\r\n\r\n&lt;/script&gt;'),
 (45714, 'category_news', 'category_news_position', 'left'),
 (49726, 'header_banner', 'header_banner_status', '1'),
 (51584, 'hotkeyword', 'hotkeyword_status', '1'),
@@ -1342,88 +1466,87 @@ INSERT INTO `setting` (`setting_id`, `group`, `key`, `value`) VALUES
 (48386, 'camketmuahang', 'camketmuahang_code', '&lt;p&gt;\r\n	&lt;span _fck_bookmark=&quot;1&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;\r\n&lt;div class=&quot;l2 bold orange big fLeft maxWidth&quot;&gt;\r\n	&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;strong&gt;Cam kết chung&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;l2 bold orange big fLeft maxWidth&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Gi&amp;aacute; lu&amp;ocirc;n lu&amp;ocirc;n rẻ nhất so với thị trường, cập nhật li&amp;ecirc;n tục h&amp;agrave;ng giờ.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Dịch vụ c&amp;agrave;i đặt miễn ph&amp;iacute; 100% trong suốt qu&amp;aacute; tr&amp;igrave;nh sử dụng.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Hệ thống cửa h&amp;agrave;ng trải rộng đến gần nh&amp;agrave; Qu&amp;yacute; kh&amp;aacute;ch h&amp;agrave;ng nhất.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;strong style=&quot;color: rgb(255, 0, 0); font-family: &#039;times new roman&#039;, times, serif;&quot;&gt;H&amp;agrave;ng TechOne&lt;/strong&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;l2 bold orange big fLeft maxWidth&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Cam kết ho&amp;agrave;n tiền 200% nếu m&amp;aacute;y b&amp;aacute;n ra l&amp;agrave; h&amp;agrave;ng Trung Quốc &amp;quot;nh&amp;aacute;i&amp;quot;.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Cam kết H&amp;agrave;ng mới, nguồn gốc r&amp;otilde; r&amp;agrave;ng, đầy đủ linh kiện theo m&amp;aacute;y.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Bảo h&amp;agrave;nh đ&amp;uacute;ng v&amp;agrave; đủ 12 th&amp;aacute;ng cho m&amp;aacute;y tại cửa h&amp;agrave;ng.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Cho đổi lại m&amp;aacute;y mới trong 15 ng&amp;agrave;y nếu m&amp;aacute;y c&amp;oacute; lỗi phần cứng do nh&amp;agrave; SX.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;strong style=&quot;font-family: &#039;times new roman&#039;, times, serif;&quot;&gt;&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;H&amp;agrave;ng C&amp;ocirc;ng ty&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;H&amp;agrave;ng nhập khẩu ch&amp;iacute;nh h&amp;atilde;ng, nguồn gốc r&amp;otilde; r&amp;agrave;ng, bảo h&amp;agrave;nh ch&amp;iacute;nh h&amp;atilde;ng.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;M&amp;aacute;y trưng b&amp;agrave;y sẵn tại Showroom, Fullbox hộp tr&amp;ugrave;ng Imei m&amp;aacute;y.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Cam k&amp;ecirc;́t gi&amp;aacute; thấp nhất. Gi&amp;aacute; đ&amp;atilde; bao gồm 10% thuế VAT. C&amp;oacute; ho&amp;aacute; đơn.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;div class=&quot;fLeft l12&quot;&gt;\r\n	&lt;span style=&quot;font-size:11px;&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif;&quot;&gt;&lt;span class=&quot;bold orange big&quot;&gt;&amp;bull;&amp;nbsp;&lt;/span&gt;Cho đổi lại m&amp;aacute;y mới trong 24H kể từ khi mua nếu m&amp;aacute;y c&amp;oacute; lỗi do nh&amp;agrave; ph&amp;acirc;n phối.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;\r\n&lt;p&gt;\r\n	&lt;span _fck_bookmark=&quot;1&quot; style=&quot;display: none;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;\r\n'),
 (48387, 'camketmuahang', 'camketmuahang_status', '1'),
 (53165, 'khuyenmai', 'khuyenmai_status', '1'),
-(53195, 'lienket', 'lienket_code', '&lt;h3&gt;&lt;strong&gt;C&amp;aacute;c h&amp;atilde;ng gi&amp;agrave;y của shop&lt;/strong&gt;&lt;/h3&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;PME Legend&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a href=&quot;http://shop.pme-legend.com/pme-legend-collection/shoes.html&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;Gi&agrave;y PME Legend&quot; src=&quot;http://justbrands.scene7.com/is/image/JustBrands/Templatelisterouterglow1?$JB220JPEG$&amp;amp;$layer_2_src=JustBrands/empty1&amp;amp;$layer_1_src=JustBrands/PBO45036&amp;amp;defaultImage=no_image&quot; style=&quot;height:240px; width:220px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;Cruyff Classic&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;a href=&quot;http://www.cruyffclassics.com/&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;Gi&agrave;y Cruyff&quot; src=&quot;http://www.cruyffclassics.com/store/media/wysiwyg/CC_FW14_webshop_homepage_sectie-button_recopa_classic_NL_1.jpg&quot; style=&quot;height:240px; width:220px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;Gaastra Trainers&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;a href=&quot;http://www.gaastraproshop.com/com-en/shoes-men/3888-3889/style=sneakers?/com-en/shoes-men/3888-3889/style=sneakers&amp;amp;p=1&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;Gi&agrave;y GAASTAR&quot; src=&quot;http://img.gaastraproshop.com/pi-65260442-380-2-216/Gaastra-Trainers-Regiment-Men-Greybue-2.jpg&quot; style=&quot;height:240px; width:220px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;Lacoste&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n&lt;p&gt;&lt;a href=&quot;http://www.lacoste.com/us/lacoste/men/shoes/&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;Gi&agrave;y Lacoste&quot; src=&quot;http://imagena2.lacoste.com/dw/image/v2/AAUP_PRD/on/demandware.static/Sites-FlagShip-Site/Sites-master/en_US/v1414687627377/11_28SPM0045_2E9_01.jpg?sw=358&amp;amp;sh=495&quot; style=&quot;height:240px; width:220px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n'),
-(53177, 'popup', 'popup_code', '&lt;p&gt;&lt;a href=&quot;http://xshop.local/image/data/brand_cruyff.jpg&quot;&gt;&lt;img alt=&quot;Chuy&ecirc;n gi&agrave;y xuất khẩu&quot; src=&quot;http://xshop.local/image/data/brand_cruyff.jpg&quot; style=&quot;height:200px; width:784px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:36px&quot;&gt;X-SHOP chuy&amp;ecirc;n giầy xuất khẩu&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2&gt;Cam đoan h&amp;agrave;ng xịn 100%&lt;/h2&gt;\r\n\r\n&lt;h2&gt;Địa chỉ 465 Đội cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/h2&gt;\r\n\r\n&lt;p&gt;fanpage:&lt;a href=&quot;http://facebook.com/xshophanoi&quot;&gt;http://facebook.com/xshophanoi&lt;/a&gt;&lt;/p&gt;\r\n'),
-(53178, 'popup', 'popup_status', '1'),
-(53196, 'lienket', 'lienket_position', 'left'),
-(53197, 'lienket', 'lienket_status', '1'),
-(53198, 'lienket', 'lienket_sort_order', '77'),
+(53792, 'lienket', 'lienket_position', 'left'),
+(53793, 'lienket', 'lienket_status', '1'),
+(53711, 'popup', 'popup_code', '&lt;p&gt;&lt;a href=&quot;http://xshop.local/image/data/brand_cruyff.jpg&quot;&gt;&lt;img alt=&quot;Chuy&ecirc;n gi&agrave;y xuất khẩu&quot; src=&quot;http://xshop.local/image/data/brand_cruyff.jpg&quot; style=&quot;height:200px; width:784px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:36px&quot;&gt;X-SHOP chuy&amp;ecirc;n giầy xuất khẩu&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;h2&gt;Cam đoan h&amp;agrave;ng xịn 100%&lt;/h2&gt;\r\n\r\n&lt;h2&gt;Địa chỉ 465 Đội cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/h2&gt;\r\n\r\n&lt;p&gt;fanpage:&lt;a href=&quot;http://facebook.com/xshophanoi&quot;&gt;http://facebook.com/xshophanoi&lt;/a&gt;&lt;/p&gt;\r\n'),
+(53791, 'lienket', 'lienket_code', '&lt;h3&gt;&lt;strong&gt;C&amp;aacute;c h&amp;atilde;ng gi&amp;agrave;y của shop&lt;/strong&gt;&lt;/h3&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;PME Legend&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a href=&quot;http://shop.pme-legend.com/pme-legend-collection/shoes.html&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;Gi&agrave;y PME Legend&quot; src=&quot;http://justbrands.scene7.com/is/image/JustBrands/Templatelisterouterglow1?$JB220JPEG$&amp;amp;$layer_2_src=JustBrands/empty1&amp;amp;$layer_1_src=JustBrands/PBO45036&amp;amp;defaultImage=no_image&quot; style=&quot;height:240px; width:220px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;Cruyff Classic&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/giay-hieu-size_-41.42.43-3.jpg&quot; style=&quot;height:146px; width:223px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;Gaastra Trainers&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://xshop.local/image/data/gaastra-trainers-garboard-kids-navy-2.jpg&quot; style=&quot;height:226px; width:226px&quot; /&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;Lacoste&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;a href=&quot;http://www.lacoste.com/us/lacoste/men/shoes/&quot; target=&quot;_blank&quot;&gt;&lt;img alt=&quot;Gi&agrave;y Lacoste&quot; src=&quot;http://imagena2.lacoste.com/dw/image/v2/AAUP_PRD/on/demandware.static/Sites-FlagShip-Site/Sites-master/en_US/v1414687627377/11_28SPM0045_2E9_01.jpg?sw=358&amp;amp;sh=495&quot; style=&quot;height:240px; width:220px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;\r\n'),
 (53164, 'khuyenmai', 'khuyenmai_code', '&lt;p&gt;Coming soon&lt;/p&gt;\r\n'),
-(53155, 'config', 'config_ssl', '0'),
-(53156, 'config', 'config_encryption', ''),
-(53157, 'config', 'config_seo_url', '1'),
-(53158, 'config', 'config_compression', '4'),
-(53159, 'config', 'config_error_display', '1'),
-(53160, 'config', 'config_error_log', '0'),
-(53161, 'config', 'config_error_filename', 'error.txt'),
+(53712, 'popup', 'popup_status', '0'),
+(53566, 'google_analytics', 'google_analytics_status', '1'),
+(53784, 'config', 'config_error_filename', 'error.txt'),
+(53783, 'config', 'config_error_log', '0'),
+(53782, 'config', 'config_error_display', '1'),
 (53163, 'header', 'header_status', '1'),
-(53136, 'config', 'config_image_thumb_height', '300'),
-(53137, 'config', 'config_image_popup_width', '600'),
-(53138, 'config', 'config_image_popup_height', '600'),
-(53139, 'config', 'config_image_category_width', '25'),
-(53140, 'config', 'config_image_category_height', '25'),
-(53141, 'config', 'config_image_product_width', '150'),
-(53142, 'config', 'config_image_product_height', '150'),
-(53143, 'config', 'config_image_additional_width', '600'),
-(53144, 'config', 'config_image_additional_height', '600'),
-(53145, 'config', 'config_image_related_width', '150'),
-(53146, 'config', 'config_image_related_height', '150'),
-(53147, 'config', 'config_image_cart_width', '75'),
-(53148, 'config', 'config_image_cart_height', '75'),
-(53149, 'config', 'config_mail_protocol', 'smtp'),
-(53150, 'config', 'config_smtp_host', 'smtp.gmail.com'),
-(53151, 'config', 'config_smtp_username', 'netstea@gmail.com'),
-(53152, 'config', 'config_smtp_password', '20082049'),
-(53153, 'config', 'config_smtp_port', '465'),
-(53154, 'config', 'config_smtp_timeout', '5'),
-(53135, 'config', 'config_image_thumb_width', '300'),
-(53134, 'config', 'config_link_banner_footer', 'http://xshophanoi.com'),
-(53133, 'config', 'config_banner_footer', 'data/t317n_4701.jpg.png'),
-(53132, 'config', 'config_logofooter', 'data/t317n_4701.jpg.png'),
-(53131, 'config', 'config_icon', 'data/t317n_4701.jpg.png'),
-(53130, 'config', 'config_logo', 'data/t317n_4701.jpg.png'),
-(53129, 'config', 'config_download_status', '5'),
-(53128, 'config', 'config_download', '1'),
-(53127, 'config', 'config_order_status_id', '1'),
-(53126, 'config', 'config_stock_subtract', '0'),
-(53125, 'config', 'config_stock_checkout', '1'),
-(53124, 'config', 'config_stock_check', '1'),
-(53123, 'config', 'config_stock_display', '0'),
-(53122, 'config', 'config_checkout', '0'),
-(53121, 'config', 'config_account', '0'),
-(53120, 'config', 'config_guest_checkout', '1'),
-(53119, 'config', 'config_customer_approval', '0'),
-(53118, 'config', 'config_customer_price', '0'),
-(53117, 'config', 'config_customer_group_id', '8'),
-(53116, 'config', 'config_alert_mail', '0'),
-(53115, 'config', 'config_weight_class_id', '1'),
-(53114, 'config', 'config_measurement_class_id', '1'),
-(53113, 'config', 'config_tax', '1'),
-(53111, 'config', 'config_currency', 'VND'),
-(53112, 'config', 'config_currency_auto', '1'),
-(53110, 'config', 'config_admin_language', 'vn'),
-(53109, 'config', 'config_language', 'vn'),
-(53108, 'config', 'config_zone_code', 'HI'),
-(53102, 'config', 'config_category', '52'),
-(53103, 'config', 'config_manufacturer', '8'),
-(53104, 'config', 'config_search', '52'),
-(53105, 'config', 'config_related', '8'),
-(53106, 'config', 'config_special', '52'),
-(53107, 'config', 'config_country_id', '230'),
-(53098, 'config', 'config_fax', ''),
-(53099, 'config', 'config_template', 'default'),
-(53100, 'config', 'config_welcome_5', '&lt;p&gt;&lt;span style=&quot;color:#f00&quot;&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;em&gt;&lt;strong&gt;GI&amp;Agrave;Y XUẤT KHẨU X-SHOP&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Địa chỉ: 465&lt;/em&gt;&lt;/span&gt;&lt;/span&gt; Đội Cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Điện thoại : 0977946017&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Email : support@xshophanoi.com &amp;nbsp; &amp;nbsp; - &amp;nbsp; &amp;nbsp; netstea@gmail.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Website : www.xshophanoi.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
-(53101, 'config', 'config_lienhe_5', '&lt;p&gt;&lt;span style=&quot;color:#f00&quot;&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;em&gt;&lt;strong&gt;GI&amp;Agrave;Y XUẤT KHẨU X-SHOP&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Địa chỉ: 465&lt;/em&gt;&lt;/span&gt;&lt;/span&gt; Đội Cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Điện thoại : 0977946017&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Email : support@xshophanoi.com &amp;nbsp; &amp;nbsp; - &amp;nbsp; &amp;nbsp; netstea@gmail.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Website : www.xshophanoi.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
-(53168, 'khuyenmaihotro', 'khuyenmaihotro_status', '1'),
-(53167, 'khuyenmaihotro', 'khuyenmaihotro_code', '&lt;p&gt;&lt;strong&gt;Hỗ trợ mua h&amp;agrave;ng&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;- Miễn ph&amp;iacute; vẫn chuyển trong phạm vi b&amp;aacute;n k&amp;iacute;nh 3km&lt;/p&gt;\r\n\r\n&lt;p&gt;- Giảm 5% cho đơn h&amp;agrave;ng lần 2 hoặc được giới thiệu&lt;/p&gt;\r\n'),
-(53166, 'khuyenmaihotro', 'khuyenmaihotro_title', 'Mua điện thoại, m&aacute;y t&iacute;nh bảng tại TechOne bạn sẽ được hỗ trợ'),
+(53781, 'config', 'config_compression', '4'),
+(53780, 'config', 'config_seo_url', '1'),
+(53779, 'config', 'config_encryption', 'zxcv'),
+(53778, 'config', 'config_ssl', '0'),
+(53777, 'config', 'config_smtp_timeout', '5'),
+(53776, 'config', 'config_smtp_port', '465'),
+(53775, 'config', 'config_smtp_password', '20082049'),
+(53774, 'config', 'config_smtp_username', 'netstea@gmail.com'),
+(53773, 'config', 'config_smtp_host', 'smtp.gmail.com'),
+(53772, 'config', 'config_mail_protocol', 'smtp'),
+(53771, 'config', 'config_image_cart_height', '75'),
+(53770, 'config', 'config_image_cart_width', '75'),
+(53769, 'config', 'config_image_related_height', '150'),
+(53768, 'config', 'config_image_related_width', '150'),
+(53767, 'config', 'config_image_additional_height', '600'),
+(53763, 'config', 'config_image_category_height', '25'),
+(53764, 'config', 'config_image_product_width', '150'),
+(53765, 'config', 'config_image_product_height', '150'),
+(53766, 'config', 'config_image_additional_width', '600'),
+(53759, 'config', 'config_image_thumb_height', '300'),
+(53760, 'config', 'config_image_popup_width', '600'),
+(53761, 'config', 'config_image_popup_height', '600'),
+(53762, 'config', 'config_image_category_width', '25'),
+(53757, 'config', 'config_link_banner_footer', 'http://xshophanoi.com'),
+(53758, 'config', 'config_image_thumb_width', '300'),
+(53756, 'config', 'config_banner_footer', 'data/t317n_4701.jpg.png'),
+(53755, 'config', 'config_logofooter', 'data/t317n_4701.jpg.png'),
+(53754, 'config', 'config_icon', 'data/t317n_4701.jpg.png'),
+(53753, 'config', 'config_logo', 'data/t317n_4701.jpg.png'),
+(53752, 'config', 'config_download_status', '5'),
+(53751, 'config', 'config_download', '1'),
+(53750, 'config', 'config_order_status_id', '1'),
+(53749, 'config', 'config_stock_subtract', '0'),
+(53748, 'config', 'config_stock_checkout', '1'),
+(53747, 'config', 'config_stock_check', '1'),
+(53746, 'config', 'config_stock_display', '0'),
+(53745, 'config', 'config_checkout', '0'),
+(53744, 'config', 'config_account', '0'),
+(53743, 'config', 'config_guest_checkout', '1'),
+(53742, 'config', 'config_customer_approval', '0'),
+(53741, 'config', 'config_customer_price', '0'),
+(53739, 'config', 'config_alert_mail', '0'),
+(53740, 'config', 'config_customer_group_id', '8'),
+(53738, 'config', 'config_weight_class_id', '1'),
+(53737, 'config', 'config_measurement_class_id', '1'),
+(53736, 'config', 'config_tax', '1'),
+(53735, 'config', 'config_currency_auto', '1'),
+(53734, 'config', 'config_currency', 'VND'),
+(53723, 'config', 'config_welcome_5', '&lt;p&gt;&lt;span style=&quot;color:#f00&quot;&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;em&gt;&lt;strong&gt;GI&amp;Agrave;Y XUẤT KHẨU X-SHOP&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Địa chỉ: 465&lt;/em&gt;&lt;/span&gt;&lt;/span&gt; Đội Cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Điện thoại : 0977946017&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Email : support@xshophanoi.com &amp;nbsp; &amp;nbsp; - &amp;nbsp; &amp;nbsp; netstea@gmail.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Website : www.xshophanoi.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
+(53733, 'config', 'config_admin_language', 'vn'),
+(53732, 'config', 'config_language', 'vn'),
+(53731, 'config', 'config_zone_code', 'HI'),
+(53730, 'config', 'config_country_id', '230'),
+(53729, 'config', 'config_special', '52'),
+(53728, 'config', 'config_related', '8'),
+(53727, 'config', 'config_search', '52'),
+(53726, 'config', 'config_manufacturer', '8'),
+(53725, 'config', 'config_category', '52'),
+(53724, 'config', 'config_lienhe_5', '&lt;p&gt;&lt;span style=&quot;color:#f00&quot;&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;em&gt;&lt;strong&gt;GI&amp;Agrave;Y XUẤT KHẨU X-SHOP&lt;/strong&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Địa chỉ: 465&lt;/em&gt;&lt;/span&gt;&lt;/span&gt; Đội Cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Điện thoại : 0977946017&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Email : support@xshophanoi.com &amp;nbsp; &amp;nbsp; - &amp;nbsp; &amp;nbsp; netstea@gmail.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#696969&quot;&gt;&lt;em&gt;- Website : www.xshophanoi.com&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
+(53796, 'khuyenmaihotro', 'khuyenmaihotro_code', '&lt;p&gt;&lt;strong&gt;Hỗ trợ mua h&amp;agrave;ng&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;- Miễn ph&amp;iacute; vẫn chuyển trong phạm vi b&amp;aacute;n k&amp;iacute;nh 3km&lt;/p&gt;\r\n\r\n&lt;p&gt;- Giảm 5% cho đơn h&amp;agrave;ng lần 2 hoặc được giới thiệu&lt;/p&gt;\r\n'),
+(53797, 'khuyenmaihotro', 'khuyenmaihotro_status', '1'),
+(53795, 'khuyenmaihotro', 'khuyenmaihotro_title', 'Mua gi&agrave;y, d&acirc;y lưng, v&iacute; da tại X-Shop c&aacute;c bạn sẽ được hỗ trợ:'),
 (50364, 'icon_share', 'icon_share_code', '&lt;p&gt;\r\n	&lt;img alt=&quot;&quot; height=&quot;30&quot; src=&quot;http://techone.vn/image/data/icon forum.jpg&quot; width=&quot;30&quot; /&gt;&lt;a href=&quot;https://www.facebook.com/TechOneVN&quot;&gt;&lt;img alt=&quot;&quot; height=&quot;30&quot; src=&quot;http://techone.vn/image/data/facebook.jpg&quot; width=&quot;30&quot; /&gt;&lt;/a&gt;&lt;img alt=&quot;&quot; height=&quot;30&quot; src=&quot;http://techone.vn/image/data/twitter.jpg&quot; width=&quot;30&quot; /&gt;&lt;a href=&quot;https://www.youtube.com/techonevn&quot;&gt;&lt;img alt=&quot;&quot; height=&quot;30&quot; src=&quot;http://techone.vn/image/data/youtube.jpg&quot; width=&quot;30&quot; /&gt;&lt;/a&gt;&lt;img alt=&quot;&quot; height=&quot;30&quot; id=&quot;bttop&quot; src=&quot;http://techone.vn/catalog/view/theme/default/image/backtop.jpg&quot; width=&quot;30&quot; /&gt;&lt;/p&gt;\r\n'),
 (50365, 'icon_share', 'icon_share_status', '1'),
 (53162, 'header', 'header_code', '&lt;p&gt;&lt;span style=&quot;background-color:#000&quot;&gt;&lt;span style=&quot;color:rgb(255, 255, 255)&quot;&gt;&lt;span style=&quot;font-size:16px&quot;&gt;&lt;span style=&quot;color:#f00&quot;&gt;Hotline&amp;nbsp; 0977946017&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
 (50934, 'background', 'background_status', '1'),
 (49725, 'header_banner', 'banner_bottom_2_href', 'http://www.techone.vn/san-pham/8/iphone-4-16gb-den-95-98.html'),
-(52161, 'footer', 'footer_title', 'Tổng đ&agrave;i hỗ trợ'),
-(52162, 'footer', 'footer_code', '&lt;p&gt;&lt;strong&gt;Tư vấn trực tiếp&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;strong&gt;19006666&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:12px&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color:#000000&quot;&gt;Bấm ph&amp;iacute;m 0: &lt;/span&gt;&lt;/strong&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;em&gt;Hỗ trợ kh&amp;aacute;ch h&amp;agrave;ng&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:12px&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color:#000000&quot;&gt;Bấm ph&amp;iacute;m 1: &lt;/span&gt;&lt;/strong&gt;&lt;em&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;Hỗ trợ mua trả g&amp;oacute;p&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:12px&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color:#000000&quot;&gt;Bấm ph&amp;iacute;m 2: &lt;/span&gt;&lt;/strong&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;em&gt;Hỗ trợ mua h&amp;agrave;ng từ xa&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:12px&quot;&gt;&lt;strong&gt;&lt;span style=&quot;color:#000000&quot;&gt;Bấm ph&amp;iacute;m 3: &lt;/span&gt;&lt;/strong&gt;&lt;em&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;Kh&amp;aacute;ch h&amp;agrave;ng mua dự &amp;aacute;n&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;strong&gt;TechOne tr&amp;ecirc;n&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;a href=&quot;http://facebook.com/techone.com.vn&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://www.techone.vn/image/upload/data/baner/banner/facebook.jpg&quot; style=&quot;color:rgb(255, 0, 0); font-size:14px; height:30px; opacity:0.9; width:30px&quot; /&gt;&lt;/a&gt;&amp;nbsp;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;a href=&quot;http://youtube.com/techonevn&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://www.techone.vn/image/upload/data/baner/banner/youtube.jpg&quot; style=&quot;height:30px; width:30px&quot; /&gt;&amp;nbsp;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
+(53788, 'footer', 'footer_title', 'Đặt h&agrave;ng ngay h&ocirc;m nay'),
+(53789, 'footer', 'footer_code', '&lt;p&gt;&lt;strong&gt;Tư vấn trực tiếp&lt;/strong&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;strong&gt;0977946017&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n\r\n&lt;p&gt;465 Đội Cấn - Ba Đ&amp;igrave;nh - H&amp;agrave; Nội&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;a href=&quot;http://facebook.com/xshophanoi.com&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://www.techone.vn/image/upload/data/baner/banner/facebook.jpg&quot; style=&quot;color:rgb(255, 0, 0); font-size:14px; height:30px; opacity:0.9; width:30px&quot; /&gt;&lt;/a&gt;&amp;nbsp;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#FF0000&quot;&gt;&lt;a href=&quot;http://youtube.com/xshophanoi&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://www.techone.vn/image/upload/data/baner/banner/youtube.jpg&quot; style=&quot;height:30px; width:30px&quot; /&gt;&amp;nbsp;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;\r\n'),
+(53790, 'footer', 'footer_status', '1'),
 (51597, 'support', 'support_status', '1'),
 (51596, 'support', 'support_position', 'left'),
 (49724, 'header_banner', 'banner_bottom_2_image', 'data/02/baner 2.jpg'),
@@ -1451,15 +1574,17 @@ INSERT INTO `setting` (`setting_id`, `group`, `key`, `value`) VALUES
 (48385, 'camketmuahang', 'camketmuahang_title', 'Bạn được g&igrave; khi mua h&agrave;ng tại TechOne?'),
 (51595, 'support', 'support_code', ''),
 (51598, 'support', 'support_sort_order', '2'),
-(52163, 'footer', 'footer_status', '1'),
-(53097, 'config', 'config_telephone', '0977946017'),
-(53096, 'config', 'config_hotline', '0977946017'),
-(53092, 'config', 'config_meta_description', 'Cửa h&agrave;ng gi&agrave;y X-Shop\r\n465 Đội Cấn - Ba Đ&igrave;nh -  H&agrave; Nội\r\nChuy&ecirc;n gi&agrave;y thể thao xuất khẩu, ch&iacute;nh h&atilde;ng 100%'),
-(53093, 'config', 'config_owner', 'X-Shop'),
-(53094, 'config', 'config_address', '465 Đội Cấn - Ba Đ&igrave;nh - H&agrave; Nội'),
-(53095, 'config', 'config_email', 'support@xshophanoi.com'),
-(53091, 'config', 'config_title', 'Gi&agrave;y xuất kh&acirc;u ch&iacute;nh h&atilde;ng'),
-(53090, 'config', 'config_store', 'X-Shop');
+(53794, 'lienket', 'lienket_sort_order', '77'),
+(53722, 'config', 'config_template', 'default'),
+(53721, 'config', 'config_fax', ''),
+(53720, 'config', 'config_telephone', '0977946017'),
+(53719, 'config', 'config_hotline', '0977946017'),
+(53718, 'config', 'config_email', 'support@xshophanoi.com'),
+(53717, 'config', 'config_address', '465 Đội Cấn - Ba Đ&igrave;nh - H&agrave; Nội'),
+(53716, 'config', 'config_owner', 'X-Shop'),
+(53713, 'config', 'config_store', 'X-Shop'),
+(53714, 'config', 'config_title', 'Gi&agrave;y xuất kh&acirc;u ch&iacute;nh h&atilde;ng'),
+(53715, 'config', 'config_meta_description', 'Cửa h&agrave;ng gi&agrave;y X-Shop\r\n465 Đội Cấn - Ba Đ&igrave;nh -  H&agrave; Nội\r\nChuy&ecirc;n gi&agrave;y thể thao xuất khẩu, ch&iacute;nh h&atilde;ng 100%');
 
 -- --------------------------------------------------------
 
@@ -1493,7 +1618,15 @@ CREATE TABLE IF NOT EXISTS `slideshow` (
   `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`slideshow_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `slideshow`
+--
+
+INSERT INTO `slideshow` (`slideshow_id`, `sort_order`, `sshow`, `image`, `link`) VALUES
+(1, 1, 'tlh', 'data/giay-hieu-size_-41.42.43-3.jpg', '/cruyff-recopa-classics-2698.html'),
+(2, 0, 'trh1', 'data/gaastra-trainers-garboard-kids-navy-1.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -1508,6 +1641,14 @@ CREATE TABLE IF NOT EXISTS `slideshow_description` (
   PRIMARY KEY (`slideshow_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `slideshow_description`
+--
+
+INSERT INTO `slideshow_description` (`slideshow_id`, `language_id`, `name`) VALUES
+(1, 5, 'Gi&agrave;y Cruyff'),
+(2, 5, 'Gi&agrave;y GAASTAR');
+
 -- --------------------------------------------------------
 
 --
@@ -1519,7 +1660,16 @@ CREATE TABLE IF NOT EXISTS `stock_status` (
   `language_id` int(11) NOT NULL,
   `name` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`stock_status_id`,`language_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `stock_status`
+--
+
+INSERT INTO `stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
+(1, 5, 'C&ograve;n h&agrave;ng'),
+(2, 5, 'Hết h&agrave;ng'),
+(3, 5, 'Sắp c&oacute; h&agrave;ng');
 
 -- --------------------------------------------------------
 
@@ -1650,7 +1800,7 @@ CREATE TABLE IF NOT EXISTS `user_group` (
 --
 
 INSERT INTO `user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Top Administrator', 'a:2:{s:6:"access";a:103:{i:0;s:17:"catalog/attribute";i:1;s:25:"catalog/attribute_display";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:13:"catalog/chome";i:5;s:20:"catalog/cinformation";i:6;s:13:"catalog/color";i:7;s:16:"catalog/csupport";i:8;s:16:"catalog/download";i:9;s:19:"catalog/information";i:10;s:20:"catalog/manufacturer";i:11;s:16:"catalog/phanloai";i:12;s:15:"catalog/product";i:13;s:20:"catalog/redirect_url";i:14;s:14:"catalog/review";i:15;s:16:"catalog/showroom";i:16;s:17:"catalog/slideshow";i:17;s:15:"catalog/support";i:18;s:13:"common/upload";i:19;s:14:"extension/feed";i:20;s:16:"extension/module";i:21;s:17:"extension/payment";i:22;s:18:"extension/shipping";i:23;s:15:"extension/total";i:24;s:16:"feed/google_base";i:25;s:19:"feed/google_sitemap";i:26;s:20:"localisation/country";i:27;s:21:"localisation/currency";i:28;s:21:"localisation/geo_zone";i:29;s:21:"localisation/language";i:30;s:30:"localisation/measurement_class";i:31;s:25:"localisation/order_status";i:32;s:25:"localisation/stock_status";i:33;s:22:"localisation/tax_class";i:34;s:25:"localisation/weight_class";i:35;s:17:"localisation/zone";i:36;s:17:"module/bestseller";i:37;s:15:"module/category";i:38;s:12:"module/cnews";i:39;s:13:"module/footer";i:40;s:23:"module/google_analytics";i:41;s:13:"module/header";i:42;s:17:"module/hotkeyword";i:43;s:18:"module/information";i:44;s:16:"module/khuyenmai";i:45;s:21:"module/khuyenmaihotro";i:46;s:14:"module/lienket";i:47;s:19:"module/manufacturer";i:48;s:11:"module/news";i:49;s:12:"module/popup";i:50;s:14:"module/support";i:51;s:10:"news/cnews";i:52;s:9:"news/news";i:53;s:16:"payment/alertpay";i:54;s:24:"payment/authorizenet_aim";i:55;s:21:"payment/bank_transfer";i:56;s:14:"payment/cheque";i:57;s:11:"payment/cod";i:58;s:14:"payment/liqpay";i:59;s:20:"payment/moneybookers";i:60;s:17:"payment/nganluong";i:61;s:15:"payment/paymate";i:62;s:16:"payment/paypoint";i:63;s:26:"payment/perpetual_payments";i:64;s:14:"payment/pp_pro";i:65;s:17:"payment/pp_pro_uk";i:66;s:19:"payment/pp_standard";i:67;s:15:"payment/sagepay";i:68;s:22:"payment/sagepay_direct";i:69;s:18:"payment/sagepay_us";i:70;s:19:"payment/twocheckout";i:71;s:16:"payment/worldpay";i:72;s:16:"report/purchased";i:73;s:11:"report/sale";i:74;s:13:"report/viewed";i:75;s:12:"sale/contact";i:76;s:11:"sale/coupon";i:77;s:13:"sale/customer";i:78;s:19:"sale/customer_group";i:79;s:15:"sale/newsletter";i:80;s:10:"sale/order";i:81;s:15:"setting/setting";i:82;s:16:"shipping/auspost";i:83;s:17:"shipping/citylink";i:84;s:13:"shipping/flat";i:85;s:13:"shipping/free";i:86;s:13:"shipping/item";i:87;s:23:"shipping/parcelforce_48";i:88;s:19:"shipping/royal_mail";i:89;s:13:"shipping/usps";i:90;s:15:"shipping/weight";i:91;s:11:"tool/backup";i:92;s:14:"tool/error_log";i:93;s:12:"total/coupon";i:94;s:14:"total/handling";i:95;s:19:"total/low_order_fee";i:96;s:14:"total/shipping";i:97;s:15:"total/sub_total";i:98;s:9:"total/tax";i:99;s:11:"total/total";i:100;s:12:"user/history";i:101;s:9:"user/user";i:102;s:20:"user/user_permission";}s:6:"modify";a:103:{i:0;s:17:"catalog/attribute";i:1;s:25:"catalog/attribute_display";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:13:"catalog/chome";i:5;s:20:"catalog/cinformation";i:6;s:13:"catalog/color";i:7;s:16:"catalog/csupport";i:8;s:16:"catalog/download";i:9;s:19:"catalog/information";i:10;s:20:"catalog/manufacturer";i:11;s:16:"catalog/phanloai";i:12;s:15:"catalog/product";i:13;s:20:"catalog/redirect_url";i:14;s:14:"catalog/review";i:15;s:16:"catalog/showroom";i:16;s:17:"catalog/slideshow";i:17;s:15:"catalog/support";i:18;s:13:"common/upload";i:19;s:14:"extension/feed";i:20;s:16:"extension/module";i:21;s:17:"extension/payment";i:22;s:18:"extension/shipping";i:23;s:15:"extension/total";i:24;s:16:"feed/google_base";i:25;s:19:"feed/google_sitemap";i:26;s:20:"localisation/country";i:27;s:21:"localisation/currency";i:28;s:21:"localisation/geo_zone";i:29;s:21:"localisation/language";i:30;s:30:"localisation/measurement_class";i:31;s:25:"localisation/order_status";i:32;s:25:"localisation/stock_status";i:33;s:22:"localisation/tax_class";i:34;s:25:"localisation/weight_class";i:35;s:17:"localisation/zone";i:36;s:17:"module/bestseller";i:37;s:15:"module/category";i:38;s:12:"module/cnews";i:39;s:13:"module/footer";i:40;s:23:"module/google_analytics";i:41;s:13:"module/header";i:42;s:17:"module/hotkeyword";i:43;s:18:"module/information";i:44;s:16:"module/khuyenmai";i:45;s:21:"module/khuyenmaihotro";i:46;s:14:"module/lienket";i:47;s:19:"module/manufacturer";i:48;s:11:"module/news";i:49;s:12:"module/popup";i:50;s:14:"module/support";i:51;s:10:"news/cnews";i:52;s:9:"news/news";i:53;s:16:"payment/alertpay";i:54;s:24:"payment/authorizenet_aim";i:55;s:21:"payment/bank_transfer";i:56;s:14:"payment/cheque";i:57;s:11:"payment/cod";i:58;s:14:"payment/liqpay";i:59;s:20:"payment/moneybookers";i:60;s:17:"payment/nganluong";i:61;s:15:"payment/paymate";i:62;s:16:"payment/paypoint";i:63;s:26:"payment/perpetual_payments";i:64;s:14:"payment/pp_pro";i:65;s:17:"payment/pp_pro_uk";i:66;s:19:"payment/pp_standard";i:67;s:15:"payment/sagepay";i:68;s:22:"payment/sagepay_direct";i:69;s:18:"payment/sagepay_us";i:70;s:19:"payment/twocheckout";i:71;s:16:"payment/worldpay";i:72;s:16:"report/purchased";i:73;s:11:"report/sale";i:74;s:13:"report/viewed";i:75;s:12:"sale/contact";i:76;s:11:"sale/coupon";i:77;s:13:"sale/customer";i:78;s:19:"sale/customer_group";i:79;s:15:"sale/newsletter";i:80;s:10:"sale/order";i:81;s:15:"setting/setting";i:82;s:16:"shipping/auspost";i:83;s:17:"shipping/citylink";i:84;s:13:"shipping/flat";i:85;s:13:"shipping/free";i:86;s:13:"shipping/item";i:87;s:23:"shipping/parcelforce_48";i:88;s:19:"shipping/royal_mail";i:89;s:13:"shipping/usps";i:90;s:15:"shipping/weight";i:91;s:11:"tool/backup";i:92;s:14:"tool/error_log";i:93;s:12:"total/coupon";i:94;s:14:"total/handling";i:95;s:19:"total/low_order_fee";i:96;s:14:"total/shipping";i:97;s:15:"total/sub_total";i:98;s:9:"total/tax";i:99;s:11:"total/total";i:100;s:12:"user/history";i:101;s:9:"user/user";i:102;s:20:"user/user_permission";}}'),
+(1, 'Top Administrator', 'a:2:{s:6:"access";a:104:{i:0;s:17:"catalog/attribute";i:1;s:25:"catalog/attribute_display";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:13:"catalog/chome";i:5;s:20:"catalog/cinformation";i:6;s:13:"catalog/color";i:7;s:16:"catalog/csupport";i:8;s:16:"catalog/download";i:9;s:19:"catalog/information";i:10;s:20:"catalog/manufacturer";i:11;s:16:"catalog/phanloai";i:12;s:15:"catalog/product";i:13;s:20:"catalog/redirect_url";i:14;s:14:"catalog/review";i:15;s:16:"catalog/showroom";i:16;s:17:"catalog/slideshow";i:17;s:15:"catalog/support";i:18;s:13:"common/upload";i:19;s:14:"extension/feed";i:20;s:16:"extension/module";i:21;s:17:"extension/payment";i:22;s:18:"extension/shipping";i:23;s:15:"extension/total";i:24;s:16:"feed/google_base";i:25;s:19:"feed/google_sitemap";i:26;s:20:"localisation/country";i:27;s:21:"localisation/currency";i:28;s:21:"localisation/geo_zone";i:29;s:21:"localisation/language";i:30;s:30:"localisation/measurement_class";i:31;s:25:"localisation/order_status";i:32;s:25:"localisation/stock_status";i:33;s:22:"localisation/tax_class";i:34;s:25:"localisation/weight_class";i:35;s:17:"localisation/zone";i:36;s:17:"module/bestseller";i:37;s:15:"module/category";i:38;s:12:"module/cnews";i:39;s:13:"module/footer";i:40;s:23:"module/google_analytics";i:41;s:13:"module/header";i:42;s:17:"module/hotkeyword";i:43;s:18:"module/information";i:44;s:16:"module/khuyenmai";i:45;s:21:"module/khuyenmaihotro";i:46;s:14:"module/lienket";i:47;s:19:"module/manufacturer";i:48;s:11:"module/news";i:49;s:12:"module/popup";i:50;s:14:"module/support";i:51;s:10:"news/cnews";i:52;s:9:"news/news";i:53;s:16:"payment/alertpay";i:54;s:24:"payment/authorizenet_aim";i:55;s:21:"payment/bank_transfer";i:56;s:14:"payment/cheque";i:57;s:11:"payment/cod";i:58;s:14:"payment/liqpay";i:59;s:20:"payment/moneybookers";i:60;s:17:"payment/nganluong";i:61;s:15:"payment/paymate";i:62;s:16:"payment/paypoint";i:63;s:26:"payment/perpetual_payments";i:64;s:14:"payment/pp_pro";i:65;s:17:"payment/pp_pro_uk";i:66;s:19:"payment/pp_standard";i:67;s:15:"payment/sagepay";i:68;s:22:"payment/sagepay_direct";i:69;s:18:"payment/sagepay_us";i:70;s:19:"payment/twocheckout";i:71;s:16:"payment/worldpay";i:72;s:16:"report/purchased";i:73;s:11:"report/sale";i:74;s:13:"report/viewed";i:75;s:12:"sale/contact";i:76;s:11:"sale/coupon";i:77;s:13:"sale/customer";i:78;s:19:"sale/customer_group";i:79;s:15:"sale/newsletter";i:80;s:10:"sale/order";i:81;s:15:"setting/setting";i:82;s:16:"shipping/auspost";i:83;s:17:"shipping/citylink";i:84;s:13:"shipping/flat";i:85;s:13:"shipping/free";i:86;s:13:"shipping/item";i:87;s:23:"shipping/parcelforce_48";i:88;s:19:"shipping/royal_mail";i:89;s:13:"shipping/usps";i:90;s:15:"shipping/weight";i:91;s:11:"tool/backup";i:92;s:14:"tool/error_log";i:93;s:12:"total/coupon";i:94;s:14:"total/handling";i:95;s:19:"total/low_order_fee";i:96;s:14:"total/shipping";i:97;s:15:"total/sub_total";i:98;s:9:"total/tax";i:99;s:11:"total/total";i:100;s:12:"user/history";i:101;s:9:"user/user";i:102;s:20:"user/user_permission";i:103;s:15:"module/category";}s:6:"modify";a:104:{i:0;s:17:"catalog/attribute";i:1;s:25:"catalog/attribute_display";i:2;s:23:"catalog/attribute_group";i:3;s:16:"catalog/category";i:4;s:13:"catalog/chome";i:5;s:20:"catalog/cinformation";i:6;s:13:"catalog/color";i:7;s:16:"catalog/csupport";i:8;s:16:"catalog/download";i:9;s:19:"catalog/information";i:10;s:20:"catalog/manufacturer";i:11;s:16:"catalog/phanloai";i:12;s:15:"catalog/product";i:13;s:20:"catalog/redirect_url";i:14;s:14:"catalog/review";i:15;s:16:"catalog/showroom";i:16;s:17:"catalog/slideshow";i:17;s:15:"catalog/support";i:18;s:13:"common/upload";i:19;s:14:"extension/feed";i:20;s:16:"extension/module";i:21;s:17:"extension/payment";i:22;s:18:"extension/shipping";i:23;s:15:"extension/total";i:24;s:16:"feed/google_base";i:25;s:19:"feed/google_sitemap";i:26;s:20:"localisation/country";i:27;s:21:"localisation/currency";i:28;s:21:"localisation/geo_zone";i:29;s:21:"localisation/language";i:30;s:30:"localisation/measurement_class";i:31;s:25:"localisation/order_status";i:32;s:25:"localisation/stock_status";i:33;s:22:"localisation/tax_class";i:34;s:25:"localisation/weight_class";i:35;s:17:"localisation/zone";i:36;s:17:"module/bestseller";i:37;s:15:"module/category";i:38;s:12:"module/cnews";i:39;s:13:"module/footer";i:40;s:23:"module/google_analytics";i:41;s:13:"module/header";i:42;s:17:"module/hotkeyword";i:43;s:18:"module/information";i:44;s:16:"module/khuyenmai";i:45;s:21:"module/khuyenmaihotro";i:46;s:14:"module/lienket";i:47;s:19:"module/manufacturer";i:48;s:11:"module/news";i:49;s:12:"module/popup";i:50;s:14:"module/support";i:51;s:10:"news/cnews";i:52;s:9:"news/news";i:53;s:16:"payment/alertpay";i:54;s:24:"payment/authorizenet_aim";i:55;s:21:"payment/bank_transfer";i:56;s:14:"payment/cheque";i:57;s:11:"payment/cod";i:58;s:14:"payment/liqpay";i:59;s:20:"payment/moneybookers";i:60;s:17:"payment/nganluong";i:61;s:15:"payment/paymate";i:62;s:16:"payment/paypoint";i:63;s:26:"payment/perpetual_payments";i:64;s:14:"payment/pp_pro";i:65;s:17:"payment/pp_pro_uk";i:66;s:19:"payment/pp_standard";i:67;s:15:"payment/sagepay";i:68;s:22:"payment/sagepay_direct";i:69;s:18:"payment/sagepay_us";i:70;s:19:"payment/twocheckout";i:71;s:16:"payment/worldpay";i:72;s:16:"report/purchased";i:73;s:11:"report/sale";i:74;s:13:"report/viewed";i:75;s:12:"sale/contact";i:76;s:11:"sale/coupon";i:77;s:13:"sale/customer";i:78;s:19:"sale/customer_group";i:79;s:15:"sale/newsletter";i:80;s:10:"sale/order";i:81;s:15:"setting/setting";i:82;s:16:"shipping/auspost";i:83;s:17:"shipping/citylink";i:84;s:13:"shipping/flat";i:85;s:13:"shipping/free";i:86;s:13:"shipping/item";i:87;s:23:"shipping/parcelforce_48";i:88;s:19:"shipping/royal_mail";i:89;s:13:"shipping/usps";i:90;s:15:"shipping/weight";i:91;s:11:"tool/backup";i:92;s:14:"tool/error_log";i:93;s:12:"total/coupon";i:94;s:14:"total/handling";i:95;s:19:"total/low_order_fee";i:96;s:14:"total/shipping";i:97;s:15:"total/sub_total";i:98;s:9:"total/tax";i:99;s:11:"total/total";i:100;s:12:"user/history";i:101;s:9:"user/user";i:102;s:20:"user/user_permission";i:103;s:15:"module/category";}}'),
 (10, 'Demonstration', 'a:2:{s:6:"access";a:5:{i:0;s:15:"catalog/product";i:1;s:13:"common/upload";i:2;s:9:"news/news";i:3;s:9:"user/user";i:4;s:20:"user/user_permission";}s:6:"modify";a:5:{i:0;s:15:"catalog/product";i:1;s:13:"common/upload";i:2;s:15:"setting/setting";i:3;s:9:"user/user";i:4;s:20:"user/user_permission";}}');
 
 -- --------------------------------------------------------

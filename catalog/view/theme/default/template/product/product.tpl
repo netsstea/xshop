@@ -96,8 +96,7 @@ $(document).click(function() {
 		  <?php } ?>
 		  <?php } ?>
 		  <div class="pinfo_cart">
-			<a onclick="<?php echo $checkout; ?>" class="colorboxCart btcart btcColor1 btcspan">MUA NGAY, GIAO TẬN NƠI<span>(xem hàng, không mua không sao)</span></a>
-			<a class="btcart btcColor2 btcspan" href="info/68/huong-dan-mua-tra-gop.html">MUA TRẢ GÓP<span>(từ 570.000₫/tháng)</span></a>
+			<a onclick="<?php echo $checkout; ?>" class="cart-button"><b>✓  MUA NGAY, GIAO TẬN NƠI</b></a>
 		  </div>
 		  <div class="pihotline">Gọi điện thoại đặt mua: <span><?php echo $hotline; ?></span></div>
 		</form>
@@ -110,7 +109,7 @@ $(document).click(function() {
 		</ul>
 	</div>
 	
-	<?php if ($phukiens) { ?>
+	<?php /* if ($phukiens) { ?>
 	<div class="phukien">
 		<h4 class="pk_title">Phụ kiện <strong><?php echo $heading_title; ?></strong></h4>
 		<ul class="listPinfo">
@@ -134,7 +133,7 @@ $(document).click(function() {
 		  <?php } ?>
 		</ul>
 	</div>
-	 <?php } ?>
+	 <?php } */ ?>
 	 
     <?php if ($products) { ?>
 	<div class="pRelated">
@@ -371,40 +370,11 @@ $(document).click(function() {
 				});
 				//--></script>
 			</div>
-			<div class="piDesc">
-				<div class="viewDesc">Xem đánh giá chi tiết</div>
-				<div class="CloseDesc">Đóng đánh giá chi tiết</div>
-			</div>
-			<script type="text/javascript"><!--
-			$('.piDesc .viewDesc').click(function(event) {
-				$('#tab_description').addClass('active');
-				$('.piDesc').addClass('selected');
-				$('html, body').animate({ scrollTop: $('.piDesc').offset().top -0}, 700);
-			});
-			
-			$('.piDesc .CloseDesc').click(function(event) {
-				$('#tab_description').removeClass('active');
-				$('.piDesc').removeClass('selected');
-			});
-			
-			$('a.CloseDesc').click(function(event) {
-				$('#tab_description').removeClass('active');
-				$('.piDesc').removeClass('selected');
-			});
-			//--></script>
 		</div>
 	</div>
 
-    <?php if($description) { ?><div id="tab_description" class="ctpage"><span class="cdarrow"></span><?php echo $description; ?><a class="CloseDesc">Đóng đánh giá chi tiết</a></div><?php } ?>
+    <?php if($description) { ?><div id="tab_description" class="ctpage"><span class="cdarrow"></span><?php echo $description; ?></div><?php } ?>
 	
-	<script type="text/javascript"><!--
-	$('a.CloseDesc').click(function(event) {
-		$('#tab_description').removeClass('active');
-		$('.piDesc').removeClass('selected');
-		
-		$('html, body').animate({ scrollTop: $('.piDesc').offset().top -0}, 1000);
-	});
-	//--></script>
 	
 	<div id="tab_brief_description" class="ctpage">
 	  <div class="tbd_technical">
@@ -419,28 +389,6 @@ $(document).click(function() {
 			</tr>
 		<?php } ?>
 		</table>
-		<div class="tbd_cauhinh">
-			<a class="tbda_show">Xem cấu hình chi tiết</a>
-			<a class="tbda_close">Đóng cấu hình chi tiết</a>
-		</div>
-		<script type="text/javascript"><!--
-		$('.tbd_cauhinh .tbda_show').click(function(event) {
-			$('#tab_technical_description').addClass('active');
-			$('.tbd_cauhinh').addClass('selected');
-			$('html, body').animate({ scrollTop: $('.tbd_cauhinh').offset().top -0}, 700);
-		});
-		
-		$('.tbd_cauhinh .tbda_close').click(function(event) {
-			$('#tab_technical_description').removeClass('active');
-			$('.tbd_cauhinh').removeClass('selected');
-		});
-		
-		$('a.tbda_close').click(function(event) {
-			$('#tab_technical_description').removeClass('active');
-			$('.tbd_cauhinh').removeClass('selected');
-		});
-		//--></script>
-	  </div>
 	  
 	  <div class="tbd_fullbox">
 		<?php if($brief_description) { ?>
@@ -472,15 +420,6 @@ $(document).click(function() {
 			<?php } ?>
 			</tbody>
 		</table>
-		<a class="tbdClose">Đóng cấu hình chi tiết</a>
-	<script type="text/javascript"><!--
-	$('a.tbdClose').click(function(event) {
-		$('#tab_technical_description').removeClass('active');
-		$('.tbd_cauhinh').removeClass('selected');
-		
-		$('html, body').animate({ scrollTop: $('.tbd_cauhinh').offset().top -0}, 1000);
-	});
-	//--></script>
 	</div>
 
     <div id="tab_review" class="ctpage">
